@@ -5,6 +5,6 @@
 ## Installation
 
 ## Contributors
-* NoaSlld
-* AlexisFeron
-* TheD57
+* [NoaSlld](https://github.com/NoaSlld)
+* [AlexisFeron](https://github.com/AlexisFeron)
+* [TheD57](https://github.com/TheD57)
