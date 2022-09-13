@@ -17,12 +17,12 @@ TO DO
 
 ### En-tête 
 
-Lorsque vous crée un nouveau dossier pensé à mettre cet en-tête afin qu'on puisse retrouver la date de la dernière update et aussi l'auteur du code.
+Lorsque vous crée un nouveau dossier pensé à mettre cet en-tête afin qu'on puisse retrouver la date de sa création, l'auteur du code et bien sûr son de fichier.
 
     // ========================================================================
     //
-    // Module        : IPersistanceMaster.cs
-    // Author        : Dufour Louis
-    // Creation date : 2022-06-10
+    // Module        : NomDuFicher.sonExtentions
+    // Author        : Prenom Nom
+    // Creation date : Date
     //
     // ========================================================================
