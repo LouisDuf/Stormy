@@ -1,6 +1,7 @@
 # Introduction
 
 Pour que le projet puisse être lisible et modifiable par tout le monde nous allons mettre quelques conventions.
+Cette liste de convention est amené à être plus complète (Mais attention la modification n'est pas permise surtout au milieu de projet).
 
 ## Architecture
 
@@ -10,6 +11,7 @@ TO DO (Arborescence du projet /module)
 
 ### Syntaxe de fonction
 
+    //Pensé à commenter vos fonctions pour vos potes ;)
     Type nameFonction(pam)
     {
     ...
