@@ -5,7 +5,14 @@ Cette liste de convention est amené à être plus complète (Mais attention la 
 
 ## Architecture
 
+### Arborescence
+
 TO DO (Arborescence du projet /module)
+
+### Nommage
+
+- **Fichier**: Commence toujours par une majuscule
+- **Dossier**: Commence toujours par une majuscule
 
 ## Code
 
