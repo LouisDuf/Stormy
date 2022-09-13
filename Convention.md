@@ -4,7 +4,7 @@ Pour que le projet puisse être lisible et modifiable par tout le monde nous all
 
 ## Architecture
 
-TO DO (Aborésance du projet /module)
+TO DO (Arborescence du projet /module)
 
 ## Code
 
