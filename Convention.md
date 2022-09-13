@@ -1,6 +1,6 @@
 # Introduction
 
-Pour que le projet puisse être lisible est modifiable par tout le monde nous allons mettre quelques conventions.
+Pour que le projet puisse être lisible et modifiable par tout le monde nous allons mettre quelques conventions.
 
 ## Architecture
 
