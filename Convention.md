@@ -17,7 +17,7 @@ TO DO (Arborescence du projet /module)
 
 ### En-tête 
 
-Lorsque vous crée un nouveau dossier pensé à mettre cet en-tête afin qu'on puisse retrouver la date de sa création, l'auteur du code et bien sûr son de fichier.
+Lorsque vous créez un nouveau dossier pensez à mettre cet en-tête afin qu'on puisse retrouver la date de sa création, l'auteur du code et bien sûr son de fichier.
 
     // ========================================================================
     //
