@@ -4,7 +4,7 @@
 
 ## Installation
 
-## schéma de conception
+## Schéma de conception
 
 ## Contributors
 * [Louis](https://github.com/Louwar)
