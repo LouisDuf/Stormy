@@ -4,6 +4,8 @@
 
 ## Installation
 
+## Schéma de conception
+
 ## Contributors
 * [Louis](https://github.com/Louwar)
 * [Noa](https://github.com/NoaSlld)
