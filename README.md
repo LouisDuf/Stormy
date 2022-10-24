@@ -1,5 +1,9 @@
 # SAE 3.01
 
+Ionic : 6.20.3
+npm : 8.19.2
+Node : 16.18.0
+
 ## Features
 
 ## Installation
