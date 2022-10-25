@@ -1,20 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- Nous pouvons pas agir sur la balise "app-home" sur le css par contre en javascript cela fonctionne.
+	Par conséquent pour contournée ce problème nous avons utilisé la balise main qui permet dans glober l'enssemble, car app-home n'est pas disponible.
+	app-home n'est pas disponible : https://stackoverflow.com/questions/66199895/ionic-change-css-of-shadow-class-in-html -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+	<main>
+		<div class="navigation">
+			<ul>
+				<img class="logo" src="../../assets/logo.svg">
+				<li class="list active">
+					<a href="index.html">
+						<span class="icon"><ion-icon name="home"></ion-icon></span>
+						<span class="title">Home</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="calendar.html">
+						<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+						<span class="title">Calendar</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="#">
+						<span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+						<span class="title">To-do list</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="#">
+						<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+						<span class="title">Settings</span>
+					</a>
+				</li>
+				<li class="list">
+					<a href="#">
+						<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+						<span class="title">Account</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="content">
+			<div class="left">
+				<p>Calendrier</p>
+			</div>
+			<div class="center">
+				<div class="top">
+					<p>Tâche en cours</p>
+				</div>
+				<div class="bottom">
+					<p>DS à venir</p>
+				</div>
+			</div>
+			<div class="right">
+				<p>To-do list</p>
+			</div>
+		</div>
+	</main>
