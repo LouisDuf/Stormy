@@ -1,0 +1,23 @@
+/* --- Page content --- */
+.content
+{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin: 15px;
+}
+
+.content .left
+{
+	position: relative;
+	display: flex;
+	background: #FAEEE7;
+	border-radius: 20px;
+	width: 33%;
+	margin: 15px;
+	padding: 15px;
+	min-width: 200px;
+	flex: 1;
+	min-height: 400px;
+	color: #1B1F24;
+}

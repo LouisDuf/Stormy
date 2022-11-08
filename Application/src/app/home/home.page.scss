@@ -166,7 +166,6 @@ main
 {
 	position: relative;
 	display: flex;
-	flex-direction: column;
 	background: #FAEEE7;
 	border-radius: 20px;
 	width: 33%;
@@ -228,83 +227,8 @@ main
 }
 
 
-/* --- card --- */
-
-.twoHour{
-	width: 300px;
-	height: 102px;
-	background: #1B1F24;
-	color: #FF593F;
-	border-radius: 15px;
-	padding: 10px;
-	margin: 10px;
-}
-   
-ion-card-title{
-	margin-top: 10px;
-	font-size: 12px;
-	color: #FAEEE7;
-}
-
-.name{
-	font-size: 20px;
-}
-
-.schedule{
-	color: #FAEEE7;
-	font-size: 13px;
-}
-
-.place{
-	background-color: #454A50;
-	font-size: 22px;
-	border-radius: 15px;
-	width: 50px;
-	height: 50px;
-	float: right;
-	margin-top: 7px;
-	line-height: 50px;
-	vertical-align: middle;
-	text-align: center;
-}
-
-
-.oneHour{
-	width: 300px;
-	height: 46.5px;
-	background: #1B1F24;
-	color: #FF593F;
-	border-radius: 15px;
-	padding: 10px;
-	margin: 10px;
-}
-
-.oneHour ion-card-title{
-	margin: 0px;
-	font-size: 0px;
-	color: #FAEEE7;
-}
-
-.name{
-	font-size: 18px;
-	vertical-align: middle;
-}
-
-.oneHour .schedule{
-	font-size: 0px;
-}
-
-.oneHour .place{
-	height: 40px;
-	float: right;
-	margin-top: -7px;
-	line-height: 40px;
-}
-
-
-
 /* --- Responsive content --- */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 680px) {
 	.content .left{
 		flex-basis: 100%;
 	}

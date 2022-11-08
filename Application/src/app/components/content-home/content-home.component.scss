@@ -1,0 +1,73 @@
+/* --- Page content --- */
+.content
+{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin: 15px;
+}
+
+.content .left
+{
+	position: relative;
+	display: flex;
+	background: #FAEEE7;
+	border-radius: 20px;
+	width: 33%;
+	margin: 15px;
+	padding: 15px;
+	min-width: 200px;
+	flex: 1;
+	min-height: 400px;
+	color: #1B1F24;
+}
+
+.content .center
+{
+	position: relative;
+	width: 33%;
+	margin: 15px 15px 45px 15px;
+	min-width: 200px;
+	flex: 1;
+	min-height: 400px;
+	color: #1B1F24;
+}
+
+.content .center .top
+{
+	position: relative;
+	display: flex;
+	background: #1B1F24;
+	border-radius: 20px;
+	height: 30%;
+	margin-bottom: 30px;
+	padding: 15px;
+	color: #FAEEE7;
+}
+
+.content .center .bottom
+{
+	position: relative;
+	display: flex;
+	background: #FAEEE7;
+	border-radius: 20px;
+	height: 70%;
+	padding: 15px;
+    color: #1B1F24;
+}
+
+.content .right
+{
+	position: relative;
+	display: flex;
+	flex: 1;
+	background: #FAEEE7;
+	border-radius: 20px;
+	width: 33%;
+	margin: 15px;
+	padding: 15px;
+	min-width: 200px;
+	min-height: 300px;
+	color: #1B1F24;
+}
+

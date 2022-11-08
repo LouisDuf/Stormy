@@ -1,16 +1,25 @@
 <!-- Nous pouvons pas agir sur la balise "app-home" sur le css par contre en javascript cela fonctionne.
 	Par conséquent pour contournée ce problème nous avons utilisé la balise main qui permet dans glober l'enssemble, car app-home n'est pas disponible.
 	app-home n'est pas disponible : https://stackoverflow.com/questions/66199895/ionic-change-css-of-shadow-class-in-html -->
-
+<!--
 	<main>
 		<div class="navigation">
 			<ul>
 				<img class="logo" src="../../assets/logo.svg">
 				<li class="list active">
+					
+					<ion-button [routerLink]="['..SZ']">
+						Home
+						<ion-icon slot="start" name="home"></ion-icon>
+					</ion-button>
+					
+					
+					
 					<a href="index.html">
 						<span class="icon"><ion-icon name="home"></ion-icon></span>
 						<span class="title">Home</span>
 					</a>
+					
 				</li>
 				<li class="list">
 					<a href="calendar.html">
@@ -38,6 +47,7 @@
 				</li>
 			</ul>
 		</div>
+
 	
 		<div class="content">
 			<div class="left">
@@ -95,4 +105,7 @@
 				<p>To-do list</p>
 			</div>
 		</div>
-	</main>
+
+		<app-content-home></app-content-home>
+	</main>-->
+

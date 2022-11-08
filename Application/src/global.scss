@@ -24,3 +24,24 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* --- Import font --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900& display=swap');
+
+/* --- Common --- */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family : 'Poppins', sans-serif;
+}
+
+app-root {
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	min-height: 100vh;
+	background: #454A50;
+	overflow-y: auto; // faire apparaître le scroll
+}
