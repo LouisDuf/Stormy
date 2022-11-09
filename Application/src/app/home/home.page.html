@@ -1,111 +1,57 @@
 <!-- Nous pouvons pas agir sur la balise "app-home" sur le css par contre en javascript cela fonctionne.
 	Par conséquent pour contournée ce problème nous avons utilisé la balise main qui permet dans glober l'enssemble, car app-home n'est pas disponible.
 	app-home n'est pas disponible : https://stackoverflow.com/questions/66199895/ionic-change-css-of-shadow-class-in-html -->
-<!--
-	<main>
-		<div class="navigation">
-			<ul>
-				<img class="logo" src="../../assets/logo.svg">
-				<li class="list active">
-					
-					<ion-button [routerLink]="['..SZ']">
-						Home
-						<ion-icon slot="start" name="home"></ion-icon>
-					</ion-button>
-					
-					
-					
-					<a href="index.html">
-						<span class="icon"><ion-icon name="home"></ion-icon></span>
-						<span class="title">Home</span>
-					</a>
-					
-				</li>
-				<li class="list">
-					<a href="calendar.html">
-						<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-						<span class="title">Calendar</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="list-outline"></ion-icon></span>
-						<span class="title">To-do list</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-						<span class="title">Settings</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-						<span class="title">Account</span>
-					</a>
-				</li>
-			</ul>
-		</div>
 
-	
-		<div class="content">
-			<div class="left">
-				<p>Calendrier</p>
+<main>
+	<div class="navigation">
+		<ul>
+			<img class="logo" src="../assets/logo.svg">
+			<li class="list active">
+			<!--
+			<ion-button [routerLink]="['..SZ']">
+				Home
+				<ion-icon slot="start" name="home"></ion-icon>
+			</ion-button>-->
+			
+			
+			
+			<a routerLink="home">
+				<span class="icon"><ion-icon name="home"></ion-icon></span>
+				<span class="title">Home</span>
+			</a>
+			
+			</li>
 
-				<ion-card class="twoHour">
-					<ion-card-header>
-						<ion-card-title>
-							<p style="text-align:left;">Cours
-								<span style="float:right;">Salle :</span>
-							</p>
-						</ion-card-title>
-					</ion-card-header>
-					<ion-card-content class="place">
-						A22
-					</ion-card-content>
-					<ion-card-content class="name">
-						R3.06 - Archi
-					</ion-card-content>
-					<ion-card-content class="schedule">
-						9:00 - 11:00
-					</ion-card-content>
-				</ion-card>
-				   
-				<ion-card class="oneHour">
-					<ion-card-header>
-						<ion-card-title>
-							<p style="text-align:left;">Cours
-								<span style="float:right;">Salle :</span>
-							</p>
-						</ion-card-title>
-					</ion-card-header>
-					<ion-card-content class="place">
-						A22
-					</ion-card-content>
-					<ion-card-content class="name">
-						R3.06 - Archi
-					</ion-card-content>
-					<ion-card-content class="schedule">
-						9:00 - 11:00
-					</ion-card-content>
-				</ion-card>
+			<li class="list">
+			<a routerLink="content-calendar">
+				<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+				<span class="title">Calendar</span>
+			</a>
+			</li>
 
+			<li class="list">
+			<a routerLink="#">
+				<span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+				<span class="title">To-do list</span>
+			</a>
+			</li>
 
-			</div>
-			<div class="center">
-				<div class="top">
-					<p>Tâche en cours</p>
-				</div>
-				<div class="bottom">
-					<p>DS à venir</p>
-				</div>
-			</div>
-			<div class="right">
-				<p>To-do list</p>
-			</div>
-		</div>
-
+			<li class="list">
+			<a routerLink="#">
+				<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+				<span class="title">Settings</span>
+			</a>
+			</li>
+			
+			<li class="list">
+			<a routerLink="#">
+				<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+				<span class="title">Account</span>
+			</a>
+			</li>
+		</ul>  
+	</div>
+	<div class="content">
 		<app-content-home></app-content-home>
-	</main>-->
-
+	</div>
+</main>
