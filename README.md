@@ -28,7 +28,7 @@ L’application web/Mobile Stormy vous permettra de visualiser votre emploi du t
 ## Schéma de conception
 
 ## Contributors
-* [Louis](https://github.com/Louwar)
+* [Louis](https://github.com/LouisDuf)
 * [Noa](https://github.com/NoaSlld)
 * [Alexis](https://github.com/AlexisFeron)
 * [David](https://github.com/TheD57)
