@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
-    //setTimeout(() => (document.querySelector('main') as HTMLElement).style.overflowY = 'scroll', 10);
-  }
+  constructor() {}
 
 }
