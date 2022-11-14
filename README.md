@@ -1,7 +1,6 @@
 <br />
 <div align="center">
     <img src="./Application/src/assets/logo.svg" alt="Logo" width="200" height="200">
-  </a>
 
   <h1 align="center">Stormy</h1>
 
@@ -10,7 +9,7 @@ L’application web/Mobile Stormy vous permettra de visualiser votre emploi du t
     <br />
     <br />
     <br />
-    <a href="https://stormy.site/">Notre Site</a>
+    <a href="./Application/src/index.html">Notre Site</a>
     ·
 
   </p>
