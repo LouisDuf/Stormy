@@ -1,58 +1,45 @@
-<!-- Nous pouvons pas agir sur la balise "app-home" sur le css par contre en javascript cela fonctionne.
-	Par conséquent pour contournée ce problème nous avons utilisé la balise main qui permet dans glober l'enssemble, car app-home n'est pas disponible.
-	app-home n'est pas disponible : https://stackoverflow.com/questions/66199895/ionic-change-css-of-shadow-class-in-html -->
-
-	<main>
-		<div class="navigation">
-			<ul>
-				<img class="logo" src="../../assets/logo.svg">
-				<li class="list active">
-					<a href="index.html">
-						<span class="icon"><ion-icon name="home"></ion-icon></span>
-						<span class="title">Home</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="calendar.html">
-						<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-						<span class="title">Calendar</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="list-outline"></ion-icon></span>
-						<span class="title">To-do list</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-						<span class="title">Settings</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-						<span class="title">Account</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	
-		<div class="content">
-			<div class="left">
-				<p>Calendrier</p>
+<ion-content [fullscreen]="true">
+	<div class="background">
+		<ion-list class="form" lines="none">
+			<h2>Créer une nouvelle tâche</h2>
+			<ion-item fill="outline" class="input">
+				<ion-label position="floating">Nom :</ion-label>
+				<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item fill="outline" class="input">
+				<ion-label position="floating">Heure de début :</ion-label>
+				<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item fill="outline" class="input">
+				<ion-label position="floating">Durée :</ion-label>
+				<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item class="plus">
+				<ion-checkbox slot="start" (click)="tutorialShown = !tutorialShown"></ion-checkbox>
+				<ion-label>Plus d'options</ion-label>
+			</ion-item>
+			<div class="mask" *ngIf="tutorialShown; else elseBlock" >
+				<ion-item fill="outline" class="input">
+					<ion-label position="floating">Catégorie :</ion-label>
+					<ion-input placeholder=""></ion-input>
+				</ion-item>
+				<ion-item class="input">
+					<ion-select placeholder="Ponctuel" interface="popover">
+						<ion-select-option value="yes">Oui</ion-select-option>
+						<ion-select-option value="no">Non</ion-select-option>
+					</ion-select>
+				</ion-item>
+				<ion-item class="input">
+					<ion-select interface="popover" placeholder="Fréquence">
+						<ion-select-option value="daily">Quotidien</ion-select-option>
+						<ion-select-option value="everyTwoDay">Tout les 2 jours</ion-select-option>
+						<ion-select-option value="weekly">Toutes les semaines</ion-select-option>
+					</ion-select>
+				</ion-item >
 			</div>
-			<div class="center">
-				<div class="top">
-					<p>Tâche en cours</p>
-				</div>
-				<div class="bottom">
-					<p>DS à venir</p>
-				</div>
-			</div>
-			<div class="right">
-				<p>To-do list</p>
-			</div>
-		</div>
-	</main>
+			<ng-template #elseBlock>
+			</ng-template>
+			<ion-button class="button" shape="round">Créer</ion-button>
+		</ion-list>
+	</div>
+</ion-content>
