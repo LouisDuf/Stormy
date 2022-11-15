@@ -1,241 +1,27 @@
-/* 
-	+----------------------+
-	| CSS : Website Stormy |
-	+----------------------+
-*/
+#container {
+  text-align: center;
 
-/* --- Import font --- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900& display=swap');
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-/* --- Common --- */
-*
-{
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family : 'Poppins', sans-serif;
 }
 
-main
-{
-	display: flex;
-	justify-content: left;
-	align-items: left;
-	min-height: 100vh;
-	background: #454A50;
-	overflow-y: auto; // faire apparaître le scroll
-}
-
-
-/* --- Navigation bar --- */
-.navigation
-{
-	position: sticky;
-	top: 0; // nécessaire à sticky cf doc mdn
-	left: 0; // nécessaire à sticky cf doc mdn
-	width: 75px;
-	min-width: 75px;
-	background: #FAEEE7;
-	box-shadow: 10px 0 0 #454A50;
-	border-left: 10px solid #FAEEE7;
-	overflow-x: hidden;
-	transition: 0.5s;
-	table-layout: fixed;
-	color: #1B1F24;
-    z-index: 1;
-}
-.navigation:hover
-{
-	min-width: 190px;
-	width: 190px;
-}
-
-.navigation ul
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding-left: 5px;
-	padding-top: 50px;
-}
-
-.navigation ul li
-{
-	position: relative;
-	list-style: none;
-	width: 100%;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
-
-.navigation ul li.active
-{
-	background: #454A50;
-}
-
-.navigation ul li a
-{
-	position: relative;
-	display: block;
-	width: 100%;
-	display: flex;
-	text-decoration: none;
-	color: #1B1F24;
-}
-
-.navigation ul li.active a::before
-{
-	content: '';
-	position: absolute;
-	top: -30px;
-	right: 0;
-	width: 30px;
-	height: 30px;
-	background: #FAEEE7;
-	border-radius: 50%;
-	box-shadow: 15px 15px 0 #454A50;
-}
-
-.navigation ul li.active a::after
-{
-	content: '';
-	position: absolute;
-	bottom: -30px;
-	right: 0;
-	width: 30px;
-	height: 30px;
-	background: #FAEEE7;
-	border-radius: 50%;
-	box-shadow: 15px -15px 0 #454A50;
-}
-
-.navigation ul li a .icon
-{
-	position: relative;
-	display: block;
-	min-width: 60px;
-	height: 60px;
-	line-height: 70px;
-	text-align: center;
-}
-
-.navigation ul li a .icon ion-icon
-{
-	position: relative;
-	font-size: 1.5em;
-	z-index: 1;
-}
-
-.navigation ul li a .title
-{
-	position: relative;
-	display: block;
-	padding-left: 10px;
-	height: 60px;
-	line-height: 60px;
-	white-space: nowrap;
-}
-
-.navigation .active ion-icon
-{
-	color: #FAEEE7;
-}
-
-.navigation .active .title
-{
-	color: #FAEEE7;
-}
-
-.navigation .logo
-{
-	width:45px;
-	padding-bottom: 40px;
-}
-
-/* --- Page content --- */
-.content
-{
-	display: flex;
-	flex-flow: row wrap;
-	width: 100%;
-	margin: 15px;
-}
-
-.content .left
-{
-	position: relative;
-	display: flex;
-	background: #FAEEE7;
-	border-radius: 20px;
-	width: 33%;
-	margin: 15px;
-	padding: 15px;
-	min-width: 200px;
-	flex: 1;
-	min-height: 400px;
-	color: #1B1F24;
-}
-
-.content .center
-{
-	position: relative;
-	width: 33%;
-	margin: 15px 15px 45px 15px;
-	min-width: 200px;
-	flex: 1;
-	min-height: 400px;
-	color: #1B1F24;
-}
-
-.content .center .top
-{
-	position: relative;
-	display: flex;
-	background: #1B1F24;
-	border-radius: 20px;
-	height: 30%;
-	margin-bottom: 30px;
-	padding: 15px;
-	color: #FAEEE7;
-}
-
-.content .center .bottom
-{
-	position: relative;
-	display: flex;
-	background: #FAEEE7;
-	border-radius: 20px;
-	height: 70%;
-	padding: 15px;
-    color: #1B1F24;
-}
-
-.content .right
-{
-	position: relative;
-	display: flex;
-	flex: 1;
-	background: #FAEEE7;
-	border-radius: 20px;
-	width: 33%;
-	margin: 15px;
-	padding: 15px;
-	min-width: 200px;
-	min-height: 300px;
-	color: #1B1F24;
-}
-
-
-/* --- Responsive content --- */
-@media screen and (max-width: 680px) {
-	.content .left{
-		flex-basis: 100%;
-	}
-	.content .center{
-		flex-basis: 100%;
-	}
-	.content .right{
-		flex-basis: 100%;
-	}
+#container a {
+  text-decoration: none;
 }

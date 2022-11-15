@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>{{ movie?.title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="movie">
+    <img [src]="imageBaseUrl + '/w400' + movie.poster_path"/>
+
+    <ion-card-header>
+      <ion-card-tilte> {{ movie.title }} </ion-card-tilte>
+      <ion-card-subtitle> {{ movie.tagline }} </ion-card-subtitle>
+      <ion-text color="tertiary">
+        <span *ngFor="let g of movie.genres, let isLast = last"> {{ g.name }} {{ !islast ? ' . ' : ''}} </span>
+      </ion-text>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      TODO: https://youtu.be/y_vwf15eADs?t=2998
+    </ion-card-content> 
+  </ion-card>
+</ion-content>
