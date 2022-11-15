@@ -170,10 +170,10 @@ main
   background: #FAEEE7;
   border-radius: 20px;
   margin: 15px;
-  padding:10px;
+  padding:15px;
   min-width: 200px;
   min-height: 400px;
-  max-height: 100%;
+  max-height: calc(100% - 30px);
   color: #1B1F24;
   flex-flow: row wrap;
   flex-direction: row;
@@ -192,11 +192,12 @@ main
 {
   position: relative;
   width: 27.5%;
-  margin: 15px 15px 45px 15px;
+  margin: 15px;
   min-width: 200px;
   flex: 1;
   min-height: 400px;
   color: #1B1F24;
+  max-height: calc(100% - 30px);
 }
 
 .content .center .top
@@ -205,21 +206,39 @@ main
   display: flex;
   background: #1B1F24;
   border-radius: 20px;
-  height: 27.5%;
+  height: 30%;
   margin-bottom: 30px;
   padding: 15px;
   color: #FAEEE7;
+  max-height:  calc(30% - 15px);
+
+} 
+.enCours{ //pas d affichage
+  all: inherit;
+  background-color: #FAEEE7;
+  color: #ff593f;
+  border-radius: 5px;
+  padding: 5px;
+  width: 8%;
+  height: 8%;
 }
 
 .content .center .bottom
 {
   position: relative;
   display: flex;
+  flex: 1;
   background: #FAEEE7;
   border-radius: 20px;
-  height: 70%;
   padding: 15px;
+  //min-width: 200px;
+  //min-height: 300px;
   color: #1B1F24;
+  flex-flow: row wrap;
+  flex-direction: row;
+  overflow: scroll;
+  padding-bottom: 65px;
+  max-height:  calc(70% - 15px);
 }
 
 .content .right
@@ -230,40 +249,40 @@ main
   background: #FAEEE7;
   border-radius: 20px;
   margin: 15px;
-  padding: 10px;
+  padding: 15px;
   min-width: 200px;
-  min-height: 300px;
+  min-height: 400px;
   color: #1B1F24;
   flex-flow: row wrap;
   flex-direction: row;
   overflow: scroll;
-  max-height: 100%;
+  max-height: calc(100% - 30px);
   padding-bottom: 85px;
 
 }
 
-.plus{
+.plus
+{
   width: 50px;
   height: 50px;
-  position: fixed;
-  bottom: 3%;
-  right: 3%;
+  position: sticky;
+  bottom: -10%;
+  left: 86%;
   z-index: 1;
   --background: #FF593F;
   --color: #FAEEE7;
-  --strong: True;
- // --background-focused: #88f4be;
-  //--background-hover: #9ce0be;
-  //--background-activated: #88f4be;
+ /* --strong: True;
+  --background-focused: #88f4be;
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  */ //marche pas, pk?
 }
 
 /* --- card --- */
 
-.twoHour{
+.edt{
   width: 100%;
-  min-width: 150px;
-  height: 12%;
-  min-height: 110px;
+  height: 110px;
   background: #1B1F24;
   color: #FF593F;
   border-radius: 15px;
@@ -299,51 +318,7 @@ ion-card-title{
   text-align: center;
 }
 
-
-.oneHour{
-  width: 100%;
-  min-width: 150px;
-  height: 12%;
-  background: #1B1F24;
-  color: #FF593F;
-  border-radius: 15px;
-  padding: 10px;
-  margin : 5px;
-}
-
-.oneHour ion-card-title{
-  margin: 0px;
-  font-size: 0px;
-  color: #FAEEE7;
-}
-
 .name{
   font-size: 18px;
   vertical-align: middle;
-}
-
-.oneHour .schedule{
-  font-size: 0px;
-}
-
-.oneHour .place{
-  height: 40px;
-  float: right;
-  margin-top: -7px;
-  line-height: 40px;
-}
-
-
-
-/* --- Responsive content --- */
-@media screen and (max-width: 1300px) {
-  .content .left{
-    flex-basis: 100%;
-  }
-  .content .center{
-    flex-basis: 100%;
-  }
-  .content .right{
-    flex-basis: 100%;
-  }
 }
