@@ -233,15 +233,18 @@
       </div>
       <div class="center">
         <div class="top">
-          <div id = enCours>
-            <p>En cours</p>
+          <div class = "intermediaire">
+            <div id = "enCours">
+              <p>En cours</p>
+            </div>
+            <div id = ECmatiere>
+              <p>Revision - Maths</p>
+            </div>
+            <div id = ECtemps>
+              <p>15:03 </p>
+            </div>
           </div>
-          <div id = ECmatiere>
-            <p>Revision - Maths</p>
-          </div>
-          <div id = ECtemps>
-            <p>15:03</p>
-          </div>
+          <ion-button class="stop" shape="round">STOP</ion-button>
         </div>
 
         <div class="bottom">
@@ -249,100 +252,50 @@
             <p>DS à venir</p>
           </div>
 
-          <ion-card class="edt">
-            <ion-card-header>
-              <ion-card-title>
-                <p style="text-align:left;">DS
-                  <span style="float:right;">Salle :</span>
-                </p>
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="place">
-              A22
-            </ion-card-content>
-            <ion-card-content class="name">
-              R3.06 - Archi
-            </ion-card-content>
-            <ion-card-content class="schedule">
-              9:00 - 11:00
-            </ion-card-content>
-          </ion-card>
+          <ion-card class="evt">
+            <div class="leftCard">
+              maths
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
+          
+           <ion-card class="evt">
+            <div class="leftCard">
+              algo
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
 
-          <ion-card class="edt">
-            <ion-card-header>
-              <ion-card-title>
-                <p style="text-align:left;">DS
-                  <span style="float:right;">Salle :</span>
-                </p>
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="place">
-              A22
-            </ion-card-content>
-            <ion-card-content class="name">
-              R3.06 - Archi
-            </ion-card-content>
-            <ion-card-content class="schedule">
-              9:00 - 11:00
-            </ion-card-content>
-          </ion-card>
+           <ion-card class="evt">
+            <div class="leftCard">
+              anglais
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
 
-          <ion-card class="edt">
-            <ion-card-header>
-              <ion-card-title>
-                <p style="text-align:left;">DS
-                  <span style="float:right;">Salle :</span>
-                </p>
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="place">
-              A22
-            </ion-card-content>
-            <ion-card-content class="name">
-              R3.06 - Archi
-            </ion-card-content>
-            <ion-card-content class="schedule">
-              9:00 - 11:00
-            </ion-card-content>
-          </ion-card>
+           <ion-card class="evt">
+            <div class="leftCard">
+              blazor
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
 
-          <ion-card class="edt">
-            <ion-card-header>
-              <ion-card-title>
-                <p style="text-align:left;">DS
-                  <span style="float:right;">Salle :</span>
-                </p>
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="place">
-              A22
-            </ion-card-content>
-            <ion-card-content class="name">
-              R3.06 - Archi
-            </ion-card-content>
-            <ion-card-content class="schedule">
-              9:00 - 11:00
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card class="edt">
-            <ion-card-header>
-              <ion-card-title>
-                <p style="text-align:left;">DS
-                  <span style="float:right;">Salle :</span>
-                </p>
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content class="place">
-              A22
-            </ion-card-content>
-            <ion-card-content class="name">
-              R3.06 - Archi
-            </ion-card-content>
-            <ion-card-content class="schedule">
-              9:00 - 11:00
-            </ion-card-content>
-          </ion-card>
+           <ion-card class="evt">
+            <div class="leftCard">
+              java
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>      
 
           <ion-button class="plus">
             <ion-icon slot = "icon-only" name="add-outline"> </ion-icon>
@@ -352,140 +305,69 @@
       </div>
       <div class="right"> 
         <p>To-Do list</p>
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+        
+        <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
-        <ion-card class="edt">
-          <ion-card-header>
-            <ion-card-title>
-              <p style="text-align:left;">Cours
-                <span style="float:right;">Salle :</span>
-              </p>
-            </ion-card-title>
-          </ion-card-header>
-          <ion-card-content class="place">
-            A22
-          </ion-card-content>
-          <ion-card-content class="name">
-            R3.06 - Archi
-          </ion-card-content>
-          <ion-card-content class="schedule">
-            9:00 - 11:00
-          </ion-card-content>
-        </ion-card>
-
-    
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
 
         <ion-button class="plus">
           <ion-icon slot = "icon-only" name="add-outline"> </ion-icon>

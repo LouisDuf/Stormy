@@ -171,7 +171,7 @@ main
   border-radius: 20px;
   margin: 15px;
   padding:15px;
-  min-width: 200px;
+  min-width: 300px;
   min-height: 400px;
   max-height: calc(100% - 30px);
   color: #1B1F24;
@@ -183,7 +183,6 @@ main
 .journee{
   position: relative;
   width: 50%;
-  min-width: 300px;
   flex: 1;
   //padding: 10px; //soit lui soit celui de .content.left
 }
@@ -193,7 +192,7 @@ main
   position: relative;
   width: 27.5%;
   margin: 15px;
-  min-width: 200px;
+  min-width: 300px;
   flex: 1;
   min-height: 400px;
   color: #1B1F24;
@@ -211,16 +210,41 @@ main
   padding: 15px;
   color: #FAEEE7;
   max-height:  calc(30% - 15px);
-
 } 
-.enCours{ //pas d affichage
-  all: inherit;
+
+.intermediaire{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#enCours{ 
+  //all: inherit;
+  //position: relative;
+  //display: flex;
   background-color: #FAEEE7;
   color: #ff593f;
   border-radius: 5px;
   padding: 5px;
-  width: 8%;
-  height: 8%;
+  width: 55px;
+  height: 25px;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+}
+
+#ECmatiere{
+  line-height: 20px;
+  color:#FF593f;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#ECtemps{
+  font-size: 330%;
+  font-family: 'Inter';
 }
 
 .content .center .bottom
@@ -250,7 +274,7 @@ main
   border-radius: 20px;
   margin: 15px;
   padding: 15px;
-  min-width: 200px;
+  min-width: 300px;
   min-height: 400px;
   color: #1B1F24;
   flex-flow: row wrap;
@@ -278,6 +302,18 @@ main
   */ //marche pas, pk?
 }
 
+.stop
+{
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  --background: #FF593F;
+  --color: #FAEEE7;
+  bottom: 15px;
+  //float:right;
+  right: 15px;
+}
+
 /* --- card --- */
 
 .edt{
@@ -288,6 +324,7 @@ main
   border-radius: 15px;
   padding: 10px;
   margin : 5px 0px 5px 0px;
+  min-width: 10s0px;
 }
    
 ion-card-title{
@@ -318,7 +355,30 @@ ion-card-title{
   text-align: center;
 }
 
-.name{
-  font-size: 18px;
+.evt{
+  width: 100%;
+  height: 110px;
+  background: #1B1F24;
+  border-radius: 15px;
+  padding: 25px;
+  margin : 5px 0px 5px 0px;
+ }
+ 
+ .rightCard{
+  float: right;
+  font-size: 20px;
+  color: #FAEEE7;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+ }
+ 
+ .leftCard{
+  float: left;
+  font-size: 25px;
+  color: #FF593F;
+  line-height: 60px;
   vertical-align: middle;
-}
+ }
