@@ -38,21 +38,57 @@
 				</li>
 			</ul>
 		</div>
-	
-		<div class="content">
-			<div class="left">
-				<p>Calendrier</p>
+		<ion-content [fullscreen]="true">
+			<div class="background">
+				<ion-list class="form" lines="none">
+					<div class="bar_header">
+						<h2>Créer une nouvelle tâche</h2>
+						<ion-button class="delete" fill="clear">
+							<ion-icon class="delete_icon" slot="icon-only" name="close-outline"></ion-icon>	
+						</ion-button>
+					</div>
+					<ion-item fill="outline" class="input">
+						<ion-label position="floating">Nom :</ion-label>
+						<ion-input placeholder=""></ion-input>
+					</ion-item>
+					<ion-item fill="outline" class="input">
+						<ion-label position="floating">Heure de début :</ion-label>
+						<ion-input placeholder=""></ion-input>
+					</ion-item>
+					<ion-item fill="outline" class="input">
+						<ion-label position="floating">Heure de fin :</ion-label>
+						<ion-input placeholder=""></ion-input>
+					</ion-item>
+					<ion-item class="plus">
+						<ion-checkbox slot="start" (click)="tutorialShown = !tutorialShown"></ion-checkbox>
+						<ion-label>Plus d'options</ion-label>
+					</ion-item>
+					<div class="mask" *ngIf="tutorialShown; else elseBlock" >
+						<ion-item fill="outline" class="input">
+							<ion-label position="floating">Catégorie :</ion-label>
+							<ion-input placeholder=""></ion-input>
+						</ion-item>
+						<ion-item class="input">
+							<ion-select placeholder="Ponctuel" interface="popover">
+								<ion-select-option value="yes">Oui</ion-select-option>
+								<ion-select-option value="no">Non</ion-select-option>
+							</ion-select>
+						</ion-item>
+						<ion-item class="input">
+							<ion-select interface="popover" placeholder="Fréquence">
+								<ion-select-option value="daily">Quotidien</ion-select-option>
+								<ion-select-option value="everyTwoDay">Tout les 2 jours</ion-select-option>
+								<ion-select-option value="weekly">Toutes les semaines</ion-select-option>
+							</ion-select>
+						</ion-item >
+					</div>
+					<ng-template #elseBlock>
+					</ng-template>
+					<div class="bar_button">
+						<ion-button class="button" shape="round">Annuler</ion-button>
+						<ion-button class="button" shape="round">Créer</ion-button>
+					</div>
+				</ion-list>
 			</div>
-			<div class="center">
-				<div class="top">
-					<p>Tâche en cours</p>
-				</div>
-				<div class="bottom">
-					<p>DS à venir</p>
-				</div>
-			</div>
-			<div class="right">
-				<p>To-do list</p>
-			</div>
-		</div>
+		</ion-content>
 	</main>
