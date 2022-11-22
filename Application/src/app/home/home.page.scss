@@ -211,7 +211,7 @@ h2{
 .bar_header{
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
@@ -223,17 +223,4 @@ h2{
 
 .delete_icon{
 	size: 50000px;
-}
-
-/* --- Responsive content --- */
-@media screen and (max-width: 680px) {
-	.content .left{
-		flex-basis: 100%;
-	}
-	.content .center{
-		flex-basis: 100%;
-	}
-	.content .right{
-		flex-basis: 100%;
-	}
 }

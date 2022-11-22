@@ -42,21 +42,25 @@
 			<div class="background">
 				<ion-list class="form" lines="none">
 					<div class="bar_header">
-						<h2>Créer une nouvelle tâche</h2>
+						<h2>Modifier votre tâche</h2>
 						<ion-button class="delete" fill="clear">
 							<ion-icon class="delete_icon" slot="icon-only" name="close-outline"></ion-icon>	
 						</ion-button>
 					</div>
 					<ion-item fill="outline" class="input">
-						<ion-label position="floating">Nom :</ion-label>
+						<ion-label position="floating">Nom de votre tâche :</ion-label>
 						<ion-input placeholder=""></ion-input>
 					</ion-item>
 					<ion-item fill="outline" class="input">
-						<ion-label position="floating">Heure de début :</ion-label>
+						<ion-label position="floating">Date limite :</ion-label>
 						<ion-input placeholder=""></ion-input>
 					</ion-item>
 					<ion-item fill="outline" class="input">
 						<ion-label position="floating">Heure de fin :</ion-label>
+						<ion-input placeholder=""></ion-input>
+					</ion-item>
+					<ion-item fill="outline" class="input">
+						<ion-label position="floating">Lieu :</ion-label>
 						<ion-input placeholder=""></ion-input>
 					</ion-item>
 					<ion-item class="plus">
@@ -85,8 +89,8 @@
 					<ng-template #elseBlock>
 					</ng-template>
 					<div class="bar_button">
-						<ion-button class="button" shape="round">Annuler</ion-button>
-						<ion-button class="button" shape="round">Créer</ion-button>
+						<ion-button class="button" shape="round">Supprimer</ion-button>
+						<ion-button class="button" shape="round">Modifier</ion-button>
 					</div>
 				</ion-list>
 			</div>
