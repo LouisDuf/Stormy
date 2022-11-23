@@ -153,74 +153,27 @@ main
 	padding-bottom: 40px;
 }
 
-.background{
-    background-color: #454A50;
-    height: 100%;
-    padding: 50px;
-} 
-
-.form{
-    background-color:#FAEEE7;
-    width: 500px;
-    border-radius: 20px;
-    margin: auto;
-}    
-
-h2{
-    font-size:larger;
-    width: fit-content;
-	font-weight: bold;
-	font-family : 'Poppins', sans-serif;
-    text-align: center;
-    margin: auto;
-    //background-color: #1B1F24;
-    //color:#FAEEE7 ;
+/* --- Page todo list --- */
+.boxMain
+{
+	position: relative;
+	display: flex;
+	flex: 1;
+	background: #FAEEE7;
+	border-radius: 20px;
+	margin: 15px;
+	padding:15px;
+	min-width: 300px;
+	min-height: 400px;
+	max-height: calc(100% - 30px);
 	color: #1B1F24;
-    border-radius: 20px;
-
-} 
-
-.input{
-    margin: 15px;
-    --background: #454A50;
-    --color: #FAEEE7;
-    --border-width: 2px;
-    --border-radius: 5px;
-} 
-
-.button{
-    margin: auto;
-    display: block;
-    width: fit-content;
-    --background: #FF593F;
-    --color: #FAEEE7;
-} 
-
-.plus{
-    --background: #FAEEE7;
-    --color: #454A50;
+	flex-flow: row wrap;
+	flex-direction: column;
+	overflow: scroll;
 }
 
-.bar_button {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 20px;
-	margin-top: 10px;
-}
-
-.bar_header{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
-
-.delete{
-	--background:var(--background);
-    --color: black;
-}
-
-.delete_icon{
-	size: 50000px;
+.bandeau
+{
+	background: #1B1F24;
+	border-radius: 20px;
 }
