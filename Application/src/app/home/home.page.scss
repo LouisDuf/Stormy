@@ -154,6 +154,13 @@ main
 }
 
 /* --- Page todo list --- */
+.content{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 15px;
+}
+
 .boxMain
 {
 	position: relative;
@@ -167,13 +174,68 @@ main
 	min-height: 400px;
 	max-height: calc(100% - 30px);
 	color: #1B1F24;
-	flex-flow: row wrap;
-	flex-direction: column;
+	flex-wrap: wrap;
 	overflow: scroll;
+}
+
+h1{
+	display: flex;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .bandeau
 {
+	display: flex;
+	justify-content: space-between;
+	height: 110px;
+	align-items: center;
 	background: #1B1F24;
-	border-radius: 20px;
+	color: #FAEEE7;
+	border-radius: 15px;
+	padding: 10px;
+	margin : 5px 0px 5px 0px;
 }
+
+.detail_task{
+	display: flex;
+	flex-direction: column;
+}
+
+.date{
+	margin-left: 50px;
+	margin-bottom: 20px;
+	font-family : 'Poppins', sans-serif;
+
+}
+
+.horaire{
+	color: #FF593F;
+	margin-left: 50px;
+	font-family : 'Poppins', sans-serif;
+}
+
+ion-item{
+	--background: #1B1F24;
+}
+
+ion-label{
+	font-weight: bold;
+	font-family : 'Poppins', sans-serif;
+    margin: 15px;
+}
+
+ion-checkbox{
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	--border-radius: 5px;
+	--border-color: #FAEEE7;
+	--checkmark-color: black;
+	--border-color-checked :#FAEEE7;
+	--background-checked: #24FF00;
+	--background: #686464;
+}
+
+// voici la couleur après avoir check #282c2c
+// la barre semin noir casse les couilles aussi
