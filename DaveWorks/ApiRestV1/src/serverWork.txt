@@ -1,0 +1,164 @@
+/////////////    First Version ////////////////////////////
+
+
+// import express, { Express, Request, Response } from 'express';
+// import dotenv from 'dotenv';
+// import taskRouter from './routes/taskRouter';
+// import cors from 'cors';
+// import bodyParser from 'body-parser';
+// dotenv.config();
+
+// const app: Express = express();
+// // const port = process.env.PORT;
+// const port = 8080;
+
+
+// app.use(express.json);
+// app.use(cors());
+// app.use(bodyParser.json());
+
+
+// app.get('/', (req: Request, res: Response) => {
+//     res.send('Express + TypeScript Server');
+// });
+
+// app.use('/api', taskRouter);
+
+
+
+// app.listen(port, () => {
+//   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
+// });
+
+
+
+
+
+
+
+
+
+import express, { Express, NextFunction, Request, Response } from 'express';
+import dotenv from 'dotenv';
+import {myRouter} from './routes/taskRouter';
+import cors from 'cors';
+import CryptoJS from 'crypto-js';
+import bodyParser from 'body-parser';
+import addTask from './controller/taskCtrl';
+import db from './database';
+
+dotenv.config();
+
+// sa a l'air deprecated
+import request from 'request';
+//
+
+const app: Express = express();
+// const port = process.env.PORT;
+const port = 8080;
+
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+  app.use(bodyParser.json());
+  app.use(cors({
+    origin: true,
+    credentials: true
+  }));
+
+//
+
+
+
+app.get('/', (req: Request, res: Response) => {
+  res.send('Express + TypeScript Server');
+});
+app.use(express.json());
+////// app.use('/api', taskRouter);
+// app.use(cors());
+// app.use(bodyParser.json());
+app.use('/api', myRouter);
+
+// app.post('/task', async(req, res) => {
+//     try {
+//         const data = req.body;
+//         console.log(data);
+//         await db.collection('task').add(data);
+//         // await db.collection('students").doc().set(data);
+//         console.log('here');
+
+//         res.send('Success add');
+//     } catch (error) {
+//         res.status(400).send('Cannot add student');
+//     }
+// });
+
+app.listen(port, () => {
+  console.log(`[server]: Server is running at https://localhost:${port}`);
+});
+
+//
+
+// const spotifyRequest = async(req : Request, res : Response) => {
+//     return new Promise((resolve, reject) => {
+//         request.post(API_URL, {
+//           form:{
+//             code: code,
+//             redi
+//           },
+//           headers: {
+//             'Authorization': 'Basic ' + (new Buffer(CLIENT_ID + ':' + CLIENT_SECRET).toString('base64')
+//           },
+//           json: true
+//         }, (err, resp) => err ? reject(err) : resolve(resp));
+//       })
+//       .then(resp => {
+//         if (resp.statusCode != 200) {
+//           return Promise.reject({
+//             statusCode: resp.statusCode,
+//             body: resp.body
+//           });
+//         }
+//         return Promise.resolve(resp.body);
+//       })
+//       .catch(err => {
+//         return Promise.reject({
+//           statusCode: 500,
+//           body: JSON.stringify({})
+//         });
+//       });
+//   };
+
+
+// const spotifyRequest = (code, ) => {
+//     return new Promise((resolve, reject) => {
+//         request.post(API_URL, {
+//           form: {
+//               code:
+//              grant_type:
+//              redirect_uri:
+//           },
+//           headers: {
+//             "Authorization": "Basic " + new Buffer(CLIENT_ID + ":" + CLIENT_SECRET).toString('base64')
+//           },
+//           json: true
+//         }, (err, resp) => err ? reject(err) : resolve(resp));
+//       })
+//       .then(resp => {
+//         if (resp.statusCode != 200) {
+//           return Promise.reject({
+//             statusCode: resp.statusCode,
+//             body: resp.body
+//           });
+//         }
+//         return Promise.resolve(resp.body);
+//       })
+//       .catch(err => {
+//         return Promise.reject({
+//           statusCode: 500,
+//           body: JSON.stringify({})
+//         });
+//       });
+//   };
+
+
