@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <swiper #swiper [config]="config">
+    <ng-template class="swiper1"  swiperSlide>
+      <div>
+        <img class="logo" src="../assets/images/mop.svg" alt="Stormy Project Logo">
+      </div>
+      <div>
+        <h2>Welcome to Stormy</h2>
+        <p>a demo calendar project</p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>Slide 2</ng-template>
+    <ng-template swiperSlide>Slide 3</ng-template>
+  </swiper>
+  <ion-button expand="block" color="orange-action" (click)="navigateToLoginPage()">Start</ion-button>
+</ion-content>

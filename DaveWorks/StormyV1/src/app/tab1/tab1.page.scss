@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/font/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hiA.woff2') format('woff2');
+  }
+
+
+
+.containe-wlcUsr{
+    text-align: center;
+    margin-top: 13px;
+    position: relative;
+}  
+.welecomeUser{
+    font-family: 'Inter';
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    --color: #1B1F24;
+}
+
+#welcomemsg{
+    text-align: center;
+    h2{
+        font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 17px;
+color: #1B1F24;
+    }
+    p{
+        font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 22px;
+color: #1B1F24;
+    }
+}
+
+
+
+
+.items{
+    --background: #333333;
+    --color: #fff;
+  
+    --border-color: #fff;
+    --border-width: 2px;
+  
+    --border-radius: 20px;
+    
+    --detail-icon-color: #D9D9D9;
+    --detail-icon-opacity: 1;
+    --detail-icon-font-size: 20px;
+}
+
+
+
+.profil{
+
+    ion-avatar {
+        img{
+            width: 49px;
+        }
+      }
+    ion-label{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;
+        color: black;
+        font-family: Inter;
+    }
+}
+
+
+
+ion-icon {
+    color: blue;
+}
+  

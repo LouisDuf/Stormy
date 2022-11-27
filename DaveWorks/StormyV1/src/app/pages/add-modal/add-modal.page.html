@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border" collapse="condense">
+	<ion-toolbar color="light">
+		<ion-title  mode="ios" size="large">Create event</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="close()" fill="clear">
+				<ion-icon name="close" slot="icon-only"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<!-- <ion-label>Nom ?</ion-label>
+		<ion-item class="head">
+			<ion-icon position="fixed" name="alarm-outline"></ion-icon>
+			<ion-input placeholder="lastEvent"></ion-input>
+		</ion-item> -->
+		
+		<div class="background">
+			<ion-list class="form" lines="none">
+			<h2>Créer une nouvelle tâche</h2>
+			<ion-item fill="outline" class="input">
+			<ion-label position="floating">Nom :</ion-label>
+			<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item fill="outline" class="input">
+			<ion-label position="floating">Heure de début :</ion-label>
+			<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item fill="outline" class="input">
+			<ion-label position="floating">Durée :</ion-label>
+			<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item class="plus">
+			<ion-checkbox slot="start" (click)="tutorialShown = !tutorialShown"></ion-checkbox>
+			<ion-label>Plus d'options</ion-label>
+			</ion-item>
+			<div class="mask" *ngIf="tutorialShown; else elseBlock" >
+			<ion-item fill="outline" class="input">
+			<ion-label position="floating">Catégorie :</ion-label>
+			<ion-input placeholder=""></ion-input>
+			</ion-item>
+			<ion-item class="input">
+			<ion-select placeholder="Ponctuel" interface="popover">
+			<ion-select-option value="yes">Oui</ion-select-option>
+			<ion-select-option value="no">Non</ion-select-option>
+			</ion-select>
+			</ion-item>
+			<ion-item class="input">
+			<ion-select interface="popover" placeholder="Fréquence">
+			<ion-select-option value="daily">Quotidien</ion-select-option>
+			<ion-select-option value="everyTwoDay">Tout les 2 jours</ion-select-option>
+			<ion-select-option value="weekly">Toutes les semaines</ion-select-option>
+			</ion-select>
+			</ion-item >
+			</div>
+			<ng-template #elseBlock>
+			</ng-template>
+			<ion-button class="button" shape="round">Créer</ion-button>
+			</ion-list>
+			</div>
+		
+
+
+	<!-- <ion-item *ngFor="let item of choice" lines="none">
+		<ion-icon [name]="item.icon" slot="start"></ion-icon>
+		<ion-label> {{ item.text }} </ion-label>
+	</ion-item> -->
+</ion-content>

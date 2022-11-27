@@ -1,0 +1,143 @@
+<!-- <ion-header>
+  <ion-toolbar >
+    <ion-title>profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="../assets/icons/DaveAvatar.png" />
+    </ion-avatar>
+    <ion-label></ion-label>
+  </div>
+  <div class="profilAvatar">
+
+
+    <div class="card">
+      <div class="img">
+      </div>
+  
+      <div class="card-content">
+          <div class="card-title">
+            <h1 class="ion-no-margin">david</h1>
+          </div>
+      </div>
+    </div>
+  </div>
+<h2>David Alm</h2>
+</ion-content> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col class="top">
+                <img id="userId" alt="Silhouette of a person's head" src="../assets/icons/DaveAvatar.png" />
+                <h2>David Alm</h2>
+                <p>david.dalmeida@yahoo.com</p>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+
+  <ion-list>
+    <ion-list-header>
+      Accomplissement
+    </ion-list-header>
+
+    <ion-card>
+
+      <div id="acc">
+            <div>
+              <img src="../assets/images/badge3.png">
+              <ion-label>
+                <h2>David Alm</h2>
+        <p>2002</p>
+              </ion-label>
+            </div>        
+            <div>
+              <img src="../assets/images/badge2.png">
+              <ion-label>
+                <h2>David Alm</h2>
+        <p>2002</p>
+              </ion-label>
+            </div>        
+            <div>
+              <img src="../assets/images/badge1.png">
+              <ion-label>
+                <h2>David Alm</h2>
+        <p>2002</p>
+              </ion-label>
+            </div>        
+      </div>
+    </ion-card>
+  </ion-list>
+
+
+  <ion-list inset class="options">
+    <ion-item button lines="full" detail>
+      <ion-avatar item-start>
+        <img src="../assets/icons/DaveAvatar.png">
+      </ion-avatar>
+      Item 1</ion-item>
+    <ion-item button lines="full" detail>Item 2</ion-item>
+    <ion-item button lines="full" detail>Item 3</ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../assets/icons/DaveAvatar.png">
+      </ion-avatar>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button outline item-end>View</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list inset noborder>
+    <ion-list-header>
+      Amis
+    </ion-list-header>
+    <ion-item button detail>
+      <ion-icon name="body" item-start></ion-icon>    
+      <ion-label>Ajouter des amis</ion-label>
+    </ion-item>
+
+    <ion-card>
+      <img src="../assets/images/friends.png" />
+      <ion-item button detail>
+        <ion-icon name="body" item-start></ion-icon>    
+        <ion-label>Mes amis</ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <ion-list inset noborder>
+    <ion-list-header>
+      Carte Stormy
+    </ion-list-header>
+
+    <ion-card>
+  
+      <img src="../assets/images/maps.png" />
+
+    
+      <!-- <ion-item>
+        <ion-icon name="wine" item-start large ></ion-icon>
+        <h2>Institute of Fine Cocktails</h2>
+        <p>14 S. Hop Avenue, Madison, WI 53703</p>
+      </ion-item> -->
+    
+      <ion-item button detail>
+        <ion-icon size="small" name="map" item-start></ion-icon>    
+        <ion-label>Ajouter des amis</ion-label>
+      </ion-item>
+    
+    </ion-card>
+  </ion-list>
+
+  
+</ion-content>

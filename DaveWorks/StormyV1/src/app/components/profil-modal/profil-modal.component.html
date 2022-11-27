@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-buttons (click)="cancel()">
+      <ion-button  >
+        <ion-icon  slot="icon-only" color="'light" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>profil</ion-title>
+    <ion-buttons>
+      <ion-button (click)="cancel()">
+    <ion-icon slot="icon-only" color="'light" name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+</ion-header>
+
+<ion-content>
+<!-- you should make a shrink header it will be cool -->
+
+<div class="profilAvatar">
+  <!-- it will be nice to use ion card here do this before 20/11 -->
+  <div class="card">
+    <div class="img">
+      <ion-img> </ion-img>
+    </div>
+
+    <div class="card-content">
+        <div class="card-title">
+          <h1 class="ion-no-margin">{{user.name}}</h1>
+        </div>
+    </div>
+  </div>
+
+</div>
+</ion-content>

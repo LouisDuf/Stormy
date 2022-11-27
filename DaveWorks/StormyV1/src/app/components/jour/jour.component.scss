@@ -1,0 +1,98 @@
+.Mybutton{
+    border-radius : 12px;
+    width: 40px;
+    height: 51px;
+    opacity: 0.76;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(27.5px);
+    --background: #FAEEE7;
+    --color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+    // border: 1px solid rgba(6, 5, 16, 0.64);
+    --padding-start: -20px;
+    --padding-end: -20px;
+}
+.mySwiper2{
+    padding-bottom: 32px;
+    padding-top: 23px;
+}
+.swiper-slide{
+
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+.mySwiper {
+    height:100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.swiper-slide-active{
+    ion-button{
+        --background: #1B1F24;
+        color: #FAEEE7;
+        opacity: 1;
+    backdrop-filter: none;
+             }
+}
+
+
+.timelineHolder{
+    position: relative;
+    z-index: 1;
+
+}
+
+.timelineHolder .timelineIndicator{
+    width:2px;
+    height:268px;
+    left: 50px;
+    background-color: #FF593F;
+    position: absolute;
+
+}
+
+.timelineHolder .bullet{
+
+        position: absolute;
+        font-weight: bold;
+    width: 9px;
+    height: 9px;
+    left: 47px;
+    border-radius: 50px;
+    background-color: #FF593F;
+}
+
+.hourInterval{
+    left: 0px;
+    max-height: 600px;
+    position: absolute;
+    color: #000000;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+
+}
+.hourInterval ul{
+    padding-left: 21px;
+    text-align: left;
+    display: inline-block;
+    color: #000000;
+    list-style: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    z-index: 1;
+    li{
+        padding-bottom : 60px;
+
+    }
+
+}
+

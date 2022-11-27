@@ -1,0 +1,47 @@
+<div class="ion-page">
+
+<ion-header >
+  <ion-toolbar  color="main-white">
+    
+
+  <ion-item button  routerLink="/profil"  detail="false" id="open-modal" class="profil" color="transparent" lines="none">
+    <ion-avatar >
+      <img src="assets/icons/DaveAvatar.png" alt="DaveAvatar">
+    </ion-avatar>
+    <ion-label>David.</ion-label>
+  </ion-item>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/stats">
+        <ion-icon slot="icon-only" size="small" name="stats-chart"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openModal()">
+        <ion-icon slot="icon-only" size="small" name="settings-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button routerLink="/add-modal2">
+        <ion-icon slot="icon-only"  size="small" name="people"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" scrollbar-x="false"  color="main-white">
+  
+  <!-- <ion-title class="containe-wlcUsr">
+  <span class="welecomeUser">bonjour.</span>
+  <br>
+  <span>
+    {{currentDate}}
+  </span>
+  </ion-title> -->
+  <ion-label id="welcomemsg">
+    <h2>bonjour.</h2>
+<p>{{currentDate}}</p>
+  </ion-label>
+    
+  <app-jour></app-jour>
+  
+</ion-content>
+</div>

@@ -1,0 +1,151 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!-- <swiper
+      style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
+      [spaceBetween]="10"
+      [navigation]="true"
+      [thumbs]="{ swiper: thumbsSwiper }"
+      class="mySwiper2"
+    >
+    <ng-template *ngFor="let item of numbers" swiperSlide>
+      <ion-button >{{item}}</ion-button>
+    </ng-template>
+    
+    </swiper>
+    <swiper
+      (swiper)="thumbsSwiper = $event"
+      [spaceBetween]="10"
+      [slidesPerView]="4"
+      [freeMode]="true"
+      [watchSlidesProgress]="true"
+      class="mySwiper"
+    >
+    <ng-template swiperSlide>
+      <ion-row *ngFor="let carte of listCarte" >
+        <app-edtcard [card]="carte" ></app-edtcard>
+      </ion-row>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-row *ngFor="let carte of listCarte" >
+        <app-edtcard [card]="carte" ></app-edtcard>
+      </ion-row>
+    </ng-template>
+    </swiper> -->
+    <!-- <ion-card class="pk-card">
+      <ion-card-content>
+        <div class="pk-calendar-header">
+          <ion-row class="pk-calendar-month">
+            <ion-col size="9" class="pk-calendar-text">
+              <h6>Select day</h6>
+              <h1>{{currentMonth}}, {{currentYear}}</h1>
+            </ion-col>
+            <ion-col sise="1" class="pk-calendar-icon" (click)="goToLastMonth()"><ion-icon name="chevron-back-outline"></ion-icon></ion-col>
+            <ion-col sise="1" class="pk-calendar-icon" (click)="goToNextMonth()"><ion-icon name="chevron-forward-outline"></ion-icon></ion-col>
+          </ion-row>
+        </div>
+        <div class="pk-calendar-body">
+          <ion-grid>
+            <ion-row class="pk-calendar-weekday">
+              <ion-col>SUN</ion-col>
+              <ion-col>MON</ion-col>
+              <ion-col>TUE</ion-col>
+              <ion-col>WED</ion-col>
+              <ion-col>THU</ion-col>
+              <ion-col>FRI</ion-col>
+              <ion-col>SAT</ion-col>
+            </ion-row>
+            <ion-row class="pk-calendar-date">
+              <ion-col *ngFor="let lastDay of daysInLastMonth" class="last-month col-1">{{lastDay}}</ion-col>
+              <ion-col *ngFor="let day of daysInThisMonth" class="col-1">
+                <span class="currentDate" *ngIf="currentDay === day; else otherDate">{{day}}</span>
+                <ng-template #otherDate class="otherDate">{{day}}</ng-template>
+              </ion-col>
+              <ion-col *ngFor="let nextDay of daysInNextMonth" class="next-month col-1">{{nextDay}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card class="pk-card">
+      <ion-card-content>
+        <div class="pk-calendar-header">
+          <ion-row class="pk-calendar-month">
+            <ion-col size="10" class="pk-calendar-text">
+              <h6>Starting at</h6>
+              <h1>{{startingAt}}</h1>
+            </ion-col>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="12" (click)="setTime('startingAt', 15)">
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                  </ion-col>
+                  <ion-col size="12" (click)="setTime('startingAt', -15)">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card class="pk-card">
+      <ion-card-content>
+        <div class="pk-calendar-header">
+          <ion-row class="pk-calendar-month">
+            <ion-col size="10" class="pk-calendar-text">
+              <h6>Ending at</h6>
+              <h1>{{endingAt}}</h1>
+            </ion-col>
+            <ion-col>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="12" (click)="setTime('endingAt', 15)">
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                  </ion-col>
+                  <ion-col size="12" (click)="setTime('endingAt', -15)">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    
+    <div style="width: 240px; margin: 0 auto; margin-top: 20px;">
+      <ion-button expand="block" class="bg-btn" (click)="sendDayAndIntervalTime()" >
+        CHECK AVAILABILITY
+      </ion-button>
+    </div> -->
+    <body>
+      <ion-input placeholder="url" class="input" #input></ion-input>
+      <ion-button (click)="geturlIcal()" size="large">submit</ion-button>
+
+      <div>
+        
+          <!-- <p *ngFor="let var of calendarData">
+            {{var.title}}
+          </p> -->
+          <ion-item *ngFor="let item of calendar">
+            <h3>{{ item }}</h3>
+          </ion-item>
+        
+      </div>
+    </body>
+
+
+
+      
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-tabs  >
+
+  <ion-tab-bar >
+    <ion-tab-button tab="tab1" #tab1>
+      <ion-icon  [name]="tab1.selected ? 'home' : 'home-outline' "></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button  class="plusButton" tab="tab2">
+      <ion-icon class="plusImg" name="add"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="add()">
+      <ion-icon  name="add"></ion-icon>
+    </ion-tab-button>
+    
+
+    <ion-tab-button tab="tab3">
+      <ion-icon name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+  
+</ion-tabs>
