@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { TodoListPageRoutingModule } from './todo-list-routing.module';
 
+import { ComponentsModule } from '../components/components.module'
 import { TodoListPage } from './todo-list.page';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { TodoListPage } from './todo-list.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     TodoListPageRoutingModule
   ],
   declarations: [TodoListPage]
