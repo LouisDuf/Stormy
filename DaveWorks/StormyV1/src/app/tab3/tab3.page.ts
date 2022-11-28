@@ -80,7 +80,11 @@ export class Tab3Page {
 //   console.log(input.value); // 👉️ "Initial value"
 // }
 //   return input.value;
+
 this.http.get('../assets/ADECal.ics', {responseType: 'text'}).subscribe(data => this.extractData(data), err => console.log('err', err)); //data => console.log('data', data)
+// for the moment i use this cause of cors issues i'm to lazy to fix but in the api it works pretty good so i will just make a post request with the url and then with a callback function do a GET request / or simplaly use a cloud function of fire base
+// this.http.get('http://edt.uca.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=2083&nbWeeks=3&calType=ical&projectId=7', {responseType: 'text'}).subscribe(data => console.log()); //data => console.log('data', data)
+
 // const fetch = require('node-fetch');
 // fetch('http://edt.uca.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=2083,5803&nbWeeks=3&calType=ical&projectId=7')
 // .then(result => result.text())

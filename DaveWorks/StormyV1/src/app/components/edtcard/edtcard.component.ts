@@ -15,7 +15,7 @@ export class EDTcardComponent implements OnInit {
   
   ngOnInit() {}
 
-  $scope.onHold = async presentActionSheet() {
+  async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Example header',
       subHeader: 'Example subheader',

@@ -39,7 +39,7 @@
             <ion-col></ion-col>
             <ion-col class="top">
                 <img id="userId" alt="Silhouette of a person's head" src="../assets/icons/DaveAvatar.png" />
-                <h2>David Alm</h2>
+                <h2>{{profile.name}}</h2>
                 <p>david.dalmeida@yahoo.com</p>
             </ion-col>
             <ion-col></ion-col>
@@ -139,5 +139,8 @@
     </ion-card>
   </ion-list>
 
-  
+  <ion-button (click)="logout()" name type="submit" expand="block" >
+    <ion-icon name="log-out-outline"></ion-icon>
+    Deconnexion</ion-button>
+
 </ion-content>

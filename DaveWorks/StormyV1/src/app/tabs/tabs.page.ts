@@ -14,9 +14,10 @@ export class TabsPage {
   async add(){
     const modal = await  this.modal.create({
       component: AddModalPage,
-      breakpoints: [0.45],
+      breakpoints: [1],
       initialBreakpoint: 0.45,
       handle: true,
+
     });
     await modal.present();
   }

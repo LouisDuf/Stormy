@@ -60,6 +60,10 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'edt-card-detail',
+    loadChildren: () => import('./pages/edt-card-detail/edt-card-detail.module').then( m => m.EdtCardDetailPageModule)
   }
   
   

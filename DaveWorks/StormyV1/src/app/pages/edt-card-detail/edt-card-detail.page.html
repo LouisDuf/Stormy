@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons  slot="primary">
+      <ion-button (click)="cancel()">
+    <ion-icon slot="icon-only" color="'light"  name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons  slot="end">
+      <ion-button (click)="cancel()">
+        <ion-icon slot="icon-only" color="'light"  name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="cancel()">
+    <ion-icon slot="icon-only" color="'light"  name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="center">
+  <ion-icon slot="icon-only" name="car-sport"></ion-icon>
+  <h2>conduite</h2>
+  <a>Ajouter une description</a>
+</div>
+<ion-list inset class="options">
+  <ion-item button lines="full">Aujourd'hui</ion-item>
+  <ion-item button lines="full">30 min, 34 min par jour</ion-item>
+  <ion-item button lines="full">Matin</ion-item>
+  
+</ion-list>
+
+</ion-content>

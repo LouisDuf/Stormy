@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { AuthentificationService } from 'src/app/services/authentification.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -88,7 +89,8 @@ credentials: FormGroup;
 		private loadingController: LoadingController,
 		private alertController: AlertController,
 		private authService: AuthentificationService,
-		private router: Router
+		private router: Router,
+		private userService: UserService
 	) {}
 
 	// Easy access for form fields
@@ -112,6 +114,7 @@ credentials: FormGroup;
 		await loading.present();
 
 		const user = await this.authService.register(this.credentials.value);
+		this.userService.uploadName("david");
 		await loading.dismiss();
 
 		if (user) {
