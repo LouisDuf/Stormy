@@ -4,7 +4,7 @@ import cors from 'cors';
 import db from './database';
 import morgan from 'morgan';
 import Controller from './controller/Icontroller';
-import ErrorMiddleware from './middleware/error.middleware';
+// import ErrorMiddleware from './middleware/error.middleware';
 import bodyParser from 'body-parser';
 
 // to secure
@@ -22,7 +22,7 @@ class App {
         // this.initialiseDatabase();
         this.initialiseMiddleware();
         this.initialiseControllers(controllers);
-        this.initialiseErrorHandling();
+        // this.initialiseErrorHandling();
     }
 
     private initialiseMiddleware(): void {
@@ -50,9 +50,9 @@ class App {
         });
     }
 
-    private initialiseErrorHandling(): void {
-        this.express.use(ErrorMiddleware);
-    }
+    // private initialiseErrorHandling(): void {
+    //     this.express.use(ErrorMiddleware);
+    // }
 
     public listen(): void {
         this.express.listen(this.port, () => {

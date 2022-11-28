@@ -32,10 +32,7 @@ const serviceAccount = require('./config/stormyv1-925c1-a28ee560843d.json');
   });
 
   const db= getFirestore();
-  db.collection('popo').doc().create({
-    id : Date.now();
-    name : .
-  })
+  
   // const User = db.collection("User")
 
 export default db;

@@ -1,11 +1,11 @@
-import express, { Express, NextFunction, Request, Response } from 'express';
-import dotenv from 'dotenv';
-import {myRouter} from './routes/taskRouter';
-import cors from 'cors';
-import CryptoJS from 'crypto-js';
-import bodyParser from 'body-parser';
-import addTask from './controller/taskCtrl';
-import db from './database';
+// import express, { Express, NextFunction, Request, Response } from 'express';
+// // import dotenv from 'dotenv';
+// // import {myRouter} from './routes/taskRouter';
+// import cors from 'cors';
+// import CryptoJS from 'crypto-js';
+// import bodyParser from 'body-parser';
+// // import addTask from './controller/taskCtrl';
+// import db from './database';
 
 // dotenv.config();
 
@@ -105,18 +105,23 @@ import db from './database';
 
 
 
-import 'dotenv/config';
-import 'module-alias/register';
-import validateEnv from 'config/validator/validatorEnv';
-import App from './app';
-import PostController from 'controller/post/post.controller';
-import UserController from '@/resources/user/user.controller';
+// import 'dotenv/config';
 
-validateEnv();
+// import dotenv from 'dotenv';
+// dotenv.config();
+
+import validateEnv from './config/validator/validatorEnv';
+import App from './app';
+import TaskController from './controller/task-controller/taskCtrl';
+// env dont work yet
+// validateEnv();
+
 
 const app = new App(
-    [new PostController(), new UserController()],
-    Number(process.env.PORT)
+    [new TaskController()],
+    Number(8080)
+    // Number(process.env.PORT)
+
 );
 
 app.listen();
