@@ -28,129 +28,144 @@ main
 
 
 /* --- Navigation bar --- */
-.navigation
+#navigation
 {
-  position: sticky;
-  top: 0; // nécessaire à sticky cf doc mdn
-  left: 0; // nécessaire à sticky cf doc mdn
-  width: 75px;
-  min-width: 75px;
-  background: #FAEEE7;
-  box-shadow: 10px 0 0 #454A50;
-  border-left: 10px solid #FAEEE7;
-  overflow-x: hidden;
-  transition: 0.5s;
-  table-layout: fixed;
-  color: #1B1F24;
+	position: sticky;
+	top: 0; // nécessaire à sticky cf doc mdn
+	left: 0; // nécessaire à sticky cf doc mdn
+	width: 75px;
+	min-width: 75px;
+	background: #FAEEE7;
+	box-shadow: 10px 0 0 #454A50;
+	border-left: 10px solid #FAEEE7;
+	overflow-x: hidden;
+	transition: 0.5s;
+	table-layout: fixed;
+	color: #1B1F24;
     z-index: 1;
 }
-.navigation:hover
+
+#navigation ul
 {
-  min-width: 190px;
-  width: 190px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 5px;
+	padding-top: 50px;
 }
 
-.navigation ul
+#navigation ul li
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-left: 5px;
-  padding-top: 50px;
+	position: relative;
+	list-style: none;
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 
-.navigation ul li
+#navigation ul li.active
 {
-  position: relative;
-  list-style: none;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+	background: #454A50;
 }
 
-.navigation ul li.active
+#navigation ul li a
 {
-  background: #454A50;
+	position: relative;
+	display: block;
+	width: 100%;
+	display: flex;
+	text-decoration: none;
+	color: #1B1F24;
 }
 
-.navigation ul li a
+#navigation ul li.active a::before
 {
-  position: relative;
-  display: block;
-  width: 100%;
-  display: flex;
-  text-decoration: none;
-  color: #1B1F24;
+	content: '';
+	position: absolute;
+	top: -30px;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	background: #FAEEE7;
+	z-index: -1;
+	border-radius: 50%;
+	box-shadow: 15px 15px 0 #454A50;
 }
 
-.navigation ul li.active a::before
+#navigation ul li.active a::after
 {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  background: #FAEEE7;
-  border-radius: 50%;
-  box-shadow: 15px 15px 0 #454A50;
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	background: #FAEEE7;
+	border-radius: 50%;
+	box-shadow: 15px -15px 0 #454A50;
 }
 
-.navigation ul li.active a::after
+#navigation ul li a .icon
 {
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  background: #FAEEE7;
-  border-radius: 50%;
-  box-shadow: 15px -15px 0 #454A50;
+	position: relative;
+	display: block;
+	min-width: 60px;
+	height: 60px;
+	line-height: 70px;
+	text-align: center;
 }
 
-.navigation ul li a .icon
+
+#navigation ul li a .logoNav
 {
-  position: relative;
-  display: block;
-  min-width: 60px;
-  height: 60px;
-  line-height: 70px;
-  text-align: center;
+	position: relative;
+	display: block;
+	min-width:45px;
+	max-width:45px;
+	padding-bottom: 85px;
+	margin-right: 16px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
 }
 
-.navigation ul li a .icon ion-icon
+#navigation ul li a .icon ion-icon
 {
-  position: relative;
-  font-size: 1.5em;
-  z-index: 1;
+	position: relative;
+	font-size: 1.5em;
+	z-index: 1;
 }
 
-.navigation ul li a .title
+#navigation ul li a .title
 {
-  position: relative;
-  display: block;
-  padding-left: 10px;
-  height: 60px;
-  line-height: 60px;
-  white-space: nowrap;
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
 }
 
-.navigation .active ion-icon
+#navigation ul li a .titleApp
 {
-  color: #FAEEE7;
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 45px;
+	line-height: 45px;
+	white-space: nowrap;
+	color: #FF593F;
 }
 
-.navigation .active .title
+#navigation .active ion-icon
 {
-  color: #FAEEE7;
+	color: #FAEEE7;
 }
 
-.navigation .logo
+#navigation .active .title
 {
-  width:45px;
-  padding-bottom: 40px;
+	color: #FAEEE7;
 }
 
 

@@ -28,7 +28,7 @@ main
 
 
 /* --- Navigation bar --- */
-.navigation
+#navigation
 {
 	position: sticky;
 	top: 0; // nécessaire à sticky cf doc mdn
@@ -44,13 +44,8 @@ main
 	color: #1B1F24;
     z-index: 1;
 }
-.navigation:hover
-{
-	min-width: 190px;
-	width: 190px;
-}
 
-.navigation ul
+#navigation ul
 {
 	position: absolute;
 	top: 0;
@@ -60,7 +55,7 @@ main
 	padding-top: 50px;
 }
 
-.navigation ul li
+#navigation ul li
 {
 	position: relative;
 	list-style: none;
@@ -69,12 +64,12 @@ main
 	border-bottom-left-radius: 20px;
 }
 
-.navigation ul li.active
+#navigation ul li.active
 {
 	background: #454A50;
 }
 
-.navigation ul li a
+#navigation ul li a
 {
 	position: relative;
 	display: block;
@@ -84,7 +79,7 @@ main
 	color: #1B1F24;
 }
 
-.navigation ul li.active a::before
+#navigation ul li.active a::before
 {
 	content: '';
 	position: absolute;
@@ -93,11 +88,12 @@ main
 	width: 30px;
 	height: 30px;
 	background: #FAEEE7;
+	z-index: -1;
 	border-radius: 50%;
 	box-shadow: 15px 15px 0 #454A50;
 }
 
-.navigation ul li.active a::after
+#navigation ul li.active a::after
 {
 	content: '';
 	position: absolute;
@@ -110,7 +106,7 @@ main
 	box-shadow: 15px -15px 0 #454A50;
 }
 
-.navigation ul li a .icon
+#navigation ul li a .icon
 {
 	position: relative;
 	display: block;
@@ -120,14 +116,28 @@ main
 	text-align: center;
 }
 
-.navigation ul li a .icon ion-icon
+
+#navigation ul li a .logoNav
+{
+	position: relative;
+	display: block;
+	min-width:45px;
+	max-width:45px;
+	padding-bottom: 85px;
+	margin-right: 16px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+}
+
+#navigation ul li a .icon ion-icon
 {
 	position: relative;
 	font-size: 1.5em;
 	z-index: 1;
 }
 
-.navigation ul li a .title
+#navigation ul li a .title
 {
 	position: relative;
 	display: block;
@@ -137,20 +147,25 @@ main
 	white-space: nowrap;
 }
 
-.navigation .active ion-icon
+#navigation ul li a .titleApp
+{
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 45px;
+	line-height: 45px;
+	white-space: nowrap;
+	color: #FF593F;
+}
+
+#navigation .active ion-icon
 {
 	color: #FAEEE7;
 }
 
-.navigation .active .title
+#navigation .active .title
 {
 	color: #FAEEE7;
-}
-
-.navigation .logo
-{
-	width:45px;
-	padding-bottom: 40px;
 }
 
 /* --- Page todo list --- */
