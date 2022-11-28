@@ -1,4 +1,4 @@
-/* 
+/*
   +----------------------+
   | CSS : Website Stormy |
   +----------------------+
@@ -168,7 +168,9 @@ main
 	color: #FAEEE7;
 }
 
+
 /* --- Page content --- */
+
 .content
 {
   display: flex;
@@ -177,7 +179,14 @@ main
   margin: 15px;
 }
 
-.content .left
+#change{
+width: 100%;
+height: 40px;
+justify-content: center;
+display: inherit;
+}
+
+.main
 {
   position: relative;
   display: flex;
@@ -185,7 +194,7 @@ main
   background: #FAEEE7;
   border-radius: 20px;
   margin: 15px;
-  padding:15px;
+  padding: 15px 5px 15px 5px;
   min-width: 300px;
   min-height: 400px;
   max-height: calc(100% - 30px);
@@ -197,136 +206,41 @@ main
 
 .journee{
   position: relative;
-  width: 50%;
+  width: 100%;
   flex: 1;
-  //padding: 10px; //soit lui soit celui de .content.left
-}
-
-.content .center
-{
-  position: relative;
-  width: 27.5%;
-  margin: 15px;
-  min-width: 300px;
-  flex: 1;
-  min-height: 400px;
-  color: #1B1F24;
-  max-height: calc(100% - 30px);
-}
-
-.content .center .top
-{
-  position: relative;
-  display: flex;
-  background: #1B1F24;
-  border-radius: 20px;
-  height: 30%;
-  margin-bottom: 30px;
-  padding: 15px;
-  color: #FAEEE7;
-  max-height:  calc(30% - 15px);
-} 
-
-.intermediaire{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#enCours{ 
-  //all: inherit;
-  //position: relative;
-  //display: flex;
-  background-color: #FAEEE7;
-  color: #ff593f;
-  border-radius: 5px;
-  padding: 5px;
-  width: 70px;
-  height: 25px;
   text-align: center;
+  padding: 0 5px 0 5px ;
+  min-width: 200px;
+}
+
+.heure{
+  width: 40px;
   font-size: 12px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  font-weight: bold;
 }
 
-#ECmatiere{
-  line-height: 20px;
-  color:#FF593f;
-  font-size: 100%;
-  font-weight: bold;
-}
-
-#ECtemps{
-  font-size: 330%;
-  font-family: 'Inter';
-}
-
-.content .center .bottom
-{
+.vide{
   position: relative;
-  display: flex;
+  width: 100%;
   flex: 1;
-  background: #FAEEE7;
-  border-radius: 20px;
-  padding: 15px;
-  //min-width: 200px;
-  //min-height: 300px;
-  color: #1B1F24;
-  flex-flow: row wrap;
-  flex-direction: row;
-  overflow: scroll;
-  padding-bottom: 65px;
-  max-height:  calc(70% - 15px);
+  text-align: center;
+  padding: 0 5px 0 5px ;
+  min-width: 200px;
+  display: none;
 }
 
-.content .right
-{
-  position: relative;
-  display: flex;
-  flex: 1;
-  background: #FAEEE7;
-  border-radius: 20px;
-  margin: 15px;
-  padding: 15px;
-  min-width: 300px;
-  min-height: 400px;
-  color: #1B1F24;
-  flex-flow: row wrap;
-  flex-direction: row;
-  overflow: scroll;
-  max-height: calc(100% - 30px);
-  padding-bottom: 85px;
-
+@media all and (max-width: 1600px){
+  .journee{
+    min-width: calc(25% - 15px);
+  }
+  .vide{
+    display: flex;
+  }
 }
 
-.plus
-{
-  width: 50px;
-  height: 50px;
-  position: sticky;
-  bottom: -10%;
-  left: 86%;
-  z-index: 1;
-  --background: #FF593F;
-  --color: #FAEEE7;
- /* --strong: True;
-  --background-focused: #88f4be;
-  --background-hover: #9ce0be;
-  --background-activated: #88f4be;
-  */ //marche pas, pk?
-}
-
-.stop
-{
-  position: absolute;
-  width: 100px;
-  height: 30px;
-  --background: #FF593F;
-  --color: #FAEEE7;
-  bottom: 15px;
-  //float:right;
-  right: 15px;
+@media all and (max-width: 1000px){
+  .journee{
+    min-width: calc(50% - 15px);
+  }
 }
 
 /* --- card --- */

@@ -1,58 +1,383 @@
-<!-- Nous pouvons pas agir sur la balise "app-home" sur le css par contre en javascript cela fonctionne.
-	Par conséquent pour contournée ce problème nous avons utilisé la balise main qui permet dans glober l'enssemble, car app-home n'est pas disponible.
-	app-home n'est pas disponible : https://stackoverflow.com/questions/66199895/ionic-change-css-of-shadow-class-in-html -->
+<main>
+  <div id="navigation" onclick="if(document.getElementById('navigation').style.minWidth=='75px'){document.getElementById('navigation').style.minWidth ='190px'}else{document.getElementById('navigation').style.minWidth ='75px'};">
+    <ul>
+      <li class="list">
+        <a>
+          <span class="logoNav"><img src="../../assets/logo.svg"></span>
+          <span class="titleApp">Stormy.</span>
+        </a>
+      </li>
+        <li class="list active">
+          <a routerLink="/home"> <!--href="home.page.ts"-->
+            <span class="icon"><ion-icon name="home"></ion-icon></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a routerLink="/calendar">
+            <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+            <span class="title">Calendar</span>
+          </a>
+        </li>
+        <li class="list">
+          <a routerLink="/todo-list">
+            <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+            <span class="title">To-do list</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+            <span class="title">Account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="content">
+      <div class="left">
+        <div class="journee">
+          <p>Calendrier journalier</p>
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
 
-	<main>
-		<div class="navigation">
-			<ul>
-				<img class="logo" src="../../assets/logo.svg">
-				<li class="list active">
-					<a href="index.html">
-						<span class="icon"><ion-icon name="home"></ion-icon></span>
-						<span class="title">Home</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="calendar.html">
-						<span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-						<span class="title">Calendar</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="list-outline"></ion-icon></span>
-						<span class="title">To-do list</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-						<span class="title">Settings</span>
-					</a>
-				</li>
-				<li class="list">
-					<a href="#">
-						<span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-						<span class="title">Account</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	
-		<div class="content">
-			<div class="left">
-				<p>Calendrier</p>
-			</div>
-			<div class="center">
-				<div class="top">
-					<p>Tâche en cours</p>
-				</div>
-				<div class="bottom">
-					<p>DS à venir</p>
-				</div>
-			</div>
-			<div class="right">
-				<p>To-do list</p>
-			</div>
-		</div>
-	</main>
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="edt">
+            <ion-card-header>
+              <ion-card-title>
+                <p style="text-align:left;">Cours
+                  <span style="float:right;">Salle :</span>
+                </p>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="place">
+              A22
+            </ion-card-content>
+            <ion-card-content class="name">
+              R3.06 - Archi
+            </ion-card-content>
+            <ion-card-content class="schedule">
+              9:00 - 11:00
+            </ion-card-content>
+          </ion-card>
+
+        </div>
+      </div>
+      <div class="center">
+        <div class="top">
+          <div class = "intermediaire">
+            <div id = "enCours">
+              <p>En cours</p>
+            </div>
+            <div id = ECmatiere>
+              <p>Revision - Maths</p>
+            </div>
+            <div id = ECtemps>
+              <p>15:03 </p>
+            </div>
+          </div>
+          <ion-button class="stop" shape="round">STOP</ion-button>
+        </div>
+
+        <div class="bottom">
+          <div>
+            <p>DS à venir</p>
+          </div>
+
+          <ion-card class="evt">
+            <div class="leftCard">
+              maths
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
+          
+           <ion-card class="evt">
+            <div class="leftCard">
+              algo
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
+
+           <ion-card class="evt">
+            <div class="leftCard">
+              anglais
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
+
+           <ion-card class="evt">
+            <div class="leftCard">
+              blazor
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>
+
+           <ion-card class="evt">
+            <div class="leftCard">
+              java
+            </div>
+            <div class="rightCard">
+              Lundi <br> 19h00
+            </div>
+           </ion-card>      
+
+          <ion-button class="plus" (click)="presentAlert()">
+            <ion-icon slot = "icon-only" name="add-outline"> </ion-icon>
+          </ion-button>
+
+        </div>
+      </div>
+      <div class="right"> 
+        <p>To-Do list</p>
+        
+        <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+         <ion-card class="evt">
+          <div class="leftCard">
+            Tennis
+          </div>
+          <div class="rightCard">
+            Lundi <br> 19h00
+          </div>
+         </ion-card>
+
+        <ion-button class="plus">
+          <ion-icon slot = "icon-only" name="add-outline"> </ion-icon>
+        </ion-button>
+
+      </div>
+    </div>
+  </main>
