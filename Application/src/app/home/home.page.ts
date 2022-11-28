@@ -9,7 +9,7 @@ import { CardAjoutComponent } from '../components/card-ajout/card-ajout.componen
 })
 export class HomePage {
 
-  constructor(private modal: ModalController) {}
+  /*constructor(private modal: ModalController) {}*/
 
   async add(){
     const modal = await  this.modal.create({
@@ -19,5 +19,53 @@ export class HomePage {
     });
     await modal.present();
   }
+  constructor(private modal: ModalController) {
+    this.timeLeft$ = interval(1000).pipe(
+      map(x => calcDateDiff()),
+      shareReplay(1)
+    );
+  }
+ 
+  public timeLeft$: Observable<timeComponents>;
+}
 
+interface timeComponents {
+  secondsToDday: number;
+  minutesToDday: number;
+  hoursToDday: number;
+}
+
+
+import { interval, Observable } from "rxjs";
+import { map, shareReplay } from "rxjs/operators";
+
+
+function calcDateDiff(endDay: Date = new Date(2022, 10, 31)): timeComponents {
+  const dDay = endDay.valueOf();
+
+  const milliSecondsInASecond = 1000;
+  const minutesInAnHour = 60;
+  const secondsInAMinute = 60;
+
+  const timeDifference = dDay - Date.now();
+
+  const daysToDday = Math.floor(
+    timeDifference /
+      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute )
+  );
+
+  const hoursToDday = Math.floor(
+    (timeDifference /
+      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute))
+  );
+
+  const minutesToDday = Math.floor(
+    (timeDifference / (milliSecondsInASecond * minutesInAnHour)) %
+      secondsInAMinute
+  );
+
+  const secondsToDday =
+    Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
+
+  return { secondsToDday, minutesToDday, hoursToDday };
 }

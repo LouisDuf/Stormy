@@ -246,10 +246,14 @@
               <p>Revision - Maths</p>
             </div>
             <div id = ECtemps>
-              <p>15:03 </p>
+              <div class="timer" *ngIf="(timeLeft$ | async) as t; else sorry">
+                <span id="hours"> {{t.hoursToDday}} </span>h
+                <span id="minutes"> {{t.minutesToDday}} </span>m
+                <span id="seconds"> {{t.secondsToDday}} </span>s
+              </div>
             </div>
           </div>
-          <ion-button class="stop" shape="round">STOP</ion-button>
+          <ion-button class="stop" shape="round">Fini</ion-button>
         </div>
 
         <div class="bottom">
