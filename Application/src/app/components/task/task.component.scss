@@ -1,0 +1,54 @@
+
+.taskTemplate
+{
+	display: flex;
+	justify-content: space-between;
+	height: 110px;
+	align-items: center;
+	background: #1B1F24;
+	color: #FAEEE7;
+	border-radius: 15px;
+	padding: 10px;
+	margin : 5px 20px 5px 0px;
+}
+
+.detail_task{
+	display: flex;
+	flex-direction: column;
+}
+
+.date{
+	margin-left: 60px;
+	font-size: larger;
+	font-family : 'Poppins', sans-serif;
+
+}
+
+.horaire{
+	color: #FF593F;
+	margin-left: 65px;
+	font-size: smaller;
+	font-family : 'Poppins', sans-serif;
+}
+
+ion-item{
+	--background: #1B1F24;
+}
+
+ion-label{
+	font-weight: bold;
+	font-family : 'Poppins', sans-serif;
+    margin: 15px;
+}
+
+ion-checkbox{
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	--border-radius: 5px;
+	--border-color: #FAEEE7;
+	--checkmark-color: black;
+	--border-color-checked :#FAEEE7;
+	--background-checked: #24FF00;
+	--background: #686464;
+}
