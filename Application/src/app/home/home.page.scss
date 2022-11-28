@@ -28,7 +28,7 @@ main
 
 
 /* --- Navigation bar --- */
-#navigation
+#navigation1
 {
 	position: sticky;
 	top: 0; // nécessaire à sticky cf doc mdn
@@ -45,7 +45,7 @@ main
     z-index: 1;
 }
 
-#navigation ul
+#navigation1 ul
 {
 	position: absolute;
 	top: 0;
@@ -55,7 +55,7 @@ main
 	padding-top: 50px;
 }
 
-#navigation ul li
+#navigation1 ul li
 {
 	position: relative;
 	list-style: none;
@@ -64,12 +64,12 @@ main
 	border-bottom-left-radius: 20px;
 }
 
-#navigation ul li.active
+#navigation1 ul li.active
 {
 	background: #454A50;
 }
 
-#navigation ul li a
+#navigation1 ul li a
 {
 	position: relative;
 	display: block;
@@ -79,7 +79,7 @@ main
 	color: #1B1F24;
 }
 
-#navigation ul li.active a::before
+#navigation1 ul li.active a::before
 {
 	content: '';
 	position: absolute;
@@ -93,7 +93,7 @@ main
 	box-shadow: 15px 15px 0 #454A50;
 }
 
-#navigation ul li.active a::after
+#navigation1 ul li.active a::after
 {
 	content: '';
 	position: absolute;
@@ -106,7 +106,7 @@ main
 	box-shadow: 15px -15px 0 #454A50;
 }
 
-#navigation ul li a .icon
+#navigation1 ul li a .icon
 {
 	position: relative;
 	display: block;
@@ -117,7 +117,7 @@ main
 }
 
 
-#navigation ul li a .logoNav
+#navigation1 ul li a .logoNav
 {
 	position: relative;
 	display: block;
@@ -130,14 +130,14 @@ main
 	text-align: center;
 }
 
-#navigation ul li a .icon ion-icon
+#navigation1 ul li a .icon ion-icon
 {
 	position: relative;
 	font-size: 1.5em;
 	z-index: 1;
 }
 
-#navigation ul li a .title
+#navigation1 ul li a .title
 {
 	position: relative;
 	display: block;
@@ -147,7 +147,7 @@ main
 	white-space: nowrap;
 }
 
-#navigation ul li a .titleApp
+#navigation1 ul li a .titleApp
 {
 	position: relative;
 	display: block;
@@ -158,12 +158,12 @@ main
 	color: #FF593F;
 }
 
-#navigation .active ion-icon
+#navigation1 .active ion-icon
 {
 	color: #FAEEE7;
 }
 
-#navigation .active .title
+#navigation1 .active .title
 {
 	color: #FAEEE7;
 }
