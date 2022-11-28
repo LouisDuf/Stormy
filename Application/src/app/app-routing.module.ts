@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'calendar',
     loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
   },
+  {
+    path: 'todo-list',
+    loadChildren: () => import('./todo-list/todo-list.module').then( m => m.TodoListPageModule)
+  },
 ];
 
 @NgModule({
