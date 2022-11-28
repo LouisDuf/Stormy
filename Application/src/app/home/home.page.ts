@@ -30,7 +30,6 @@ export class HomePage {
 }
 
 interface timeComponents {
-  secondsToDday: number;
   minutesToDday: number;
   hoursToDday: number;
 }
@@ -67,5 +66,5 @@ function calcDateDiff(endDay: Date = new Date(2022, 10, 31)): timeComponents {
   const secondsToDday =
     Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
 
-  return { secondsToDday, minutesToDday, hoursToDday };
+  return { minutesToDday, hoursToDday };
 }
