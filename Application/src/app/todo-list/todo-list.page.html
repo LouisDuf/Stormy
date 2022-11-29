@@ -44,7 +44,10 @@
 			</ul>
 		</div>
 
-		<div class="content">
+		<div class="taskEmpty" *ngIf="tasks.length === 0">
+			<small>Vous n'avez pas de tâches pour le momments</small>
+		</div>
+		<div class="content" *ngIf="tasks.length > 0">
 			<div class="boxMain">
 				<h1>Sport</h1>
 				<div class="boxTask">
@@ -209,7 +212,7 @@
 						</div>
 					</div>
 				</div>
-				<ion-button class="plus" (click)="addTaks()">
+				<ion-button class="plus" (click)="addTaskBox()">
 					<ion-icon slot = "icon-only" name="add-outline"> </ion-icon>
 				</ion-button>
 			</div>
@@ -269,4 +272,7 @@
 				</div>
 			</div>
 		</div>
+		<ion-button class="plus" (click)="addTaskBox()">
+			<ion-icon slot = "icon-only" name="add-outline"> </ion-icon>
+		</ion-button>
 	</main>

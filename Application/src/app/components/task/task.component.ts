@@ -11,4 +11,10 @@ export class TaskComponent implements OnInit {
 
   ngOnInit() {}
 
+
+ /* onCheck(event, i){
+    this.tasks[i].isChecked = event.detail.checked;
+  }*/
+
+
 }

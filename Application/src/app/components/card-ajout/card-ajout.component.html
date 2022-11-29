@@ -3,36 +3,34 @@
     <ion-list class="form" lines="none">
       <div class="bar_header">
         <h2>Ajouter une tâche</h2>
-      <!--
-        <ion-button class="delete" fill="clear">
-          <ion-icon class="delete_icon" slot="icon-only" name="close-outline"></ion-icon>	
+        <ion-button class="delete" fill="clear" (click)="dismis()">
+          <ion-icon class="delete_icon" slot="icon-only" size="large" name="close-outline"></ion-icon>	
         </ion-button>
-      -->
       </div>
       <ion-item fill="outline" class="input">
         <ion-label position="floating">Nom de votre tâche :</ion-label>
-        <ion-input [(ngModel)]="taskName" placeholder=""></ion-input>
+        <ion-input [(ngModel)]="taskName" placeholder="" ngDefaultControl></ion-input>
       </ion-item>
       <ion-item fill="outline" class="input">
         <ion-icon name="calendar-outline" slot="start"></ion-icon>
         <ion-label position="floating">Date :</ion-label>
-        <ion-input [(ngModel)]="taskDate" placeholder=""></ion-input>
+        <ion-input [(ngModel)]="taskDate" placeholder="" ngDefaultControl ></ion-input>
       </ion-item>
       
       <div class="dateLayout">
         <ion-item fill="outline" class="input">
           <ion-label position="floating"> Heure début :</ion-label>
-          <ion-input [(ngModel)]="taskHourStart" placeholder=""></ion-input>
+          <ion-input [(ngModel)]="taskHourStart" placeholder="" ngDefaultControl ></ion-input>
         </ion-item>
         <ion-item fill="outline" class="input">
           <ion-label position="floating"> Heure fin :</ion-label>
-          <ion-input [(ngModel)]="taskHourEnd" placeholder=""></ion-input>
+          <ion-input [(ngModel)]="taskHourEnd" placeholder="" ngDefaultControl ></ion-input>
         </ion-item>
       </div>
   
       <ion-item fill="outline" class="input">
         <ion-label position="floating">Lieu :</ion-label>
-        <ion-input [(ngModel)]="taskLocate" placeholder=""></ion-input>
+        <ion-input [(ngModel)]="taskLocate" placeholder="" ngDefaultControl ></ion-input>
       </ion-item>
       <!--
       <ion-item class="plus">
@@ -62,8 +60,7 @@
       </ng-template>
       -->
       <div class="bar_button">
-        <ion-button class="button" shape="round" (click)="dismis()">Annuler</ion-button>
-        <ion-button class="button" shape="round">Ajouter</ion-button>
+        <ion-button class="button" shape="round" (click)="addNewTask()" [disabled]="taskName === ''">Ajouter</ion-button>
       </div>
     </ion-list>
   </div>

@@ -1,8 +1,8 @@
 <div class="taskTemplate">
   <div>
     <ion-item class="item-div">
-      <ion-checkbox></ion-checkbox>
-      <ion-label>lessive</ion-label>
+      <ion-checkbox [checked]="task.isChecked"></ion-checkbox>
+      <ion-label>{{task.content}}</ion-label>
     </ion-item>
   </div>
   <div class="detail_task">
