@@ -1,3 +1,4 @@
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-ajout.component.scss'],
 })
 export class CardAjoutComponent implements OnInit {
+  taskName
+  taskDate
+  taskHourStart
+  taskHourEnd
+  taskLocate
 
-  constructor() { }
+  taskObject
+  constructor(private modal: ModalController) {}
 
   ngOnInit() {}
+
+  async dismis(){
+    await this.modal.dismiss(this.taskObject)
+  }
+
+  AddTask(){
+    this.taskObject = ({taskName:this.taskName,
+      taskDate:this.taskDate,
+      taskHourStart:this.taskHourStart,
+      taskHourEnd:this.taskHourEnd,
+      taskLocate:this.taskLocate})
+  }
 
 }

@@ -14,12 +14,21 @@ export class TodoListPage implements OnInit {
   ngOnInit() {
   }
 
-  async add(){
+  todoList = [{
+    itemName: 'NomTask',
+    itemDate: '29/11/2022',
+    itemHourStart: '13h30',
+    itemHourEnd: '15h30',
+    itemLocate: 'Lieu'
+  }]
+
+
+  async addTaks(){
     const modal = await  this.modal.create({
       component: CardAjoutComponent,
       handle: true,
       //cssClass: "maclasse",
     });
-    await modal.present();
+    return await modal.present();
   }
 }

@@ -1,28 +1,40 @@
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="background">
     <ion-list class="form" lines="none">
       <div class="bar_header">
-        <h2>Modifier votre tâche</h2>
+        <h2>Ajouter une tâche</h2>
+      <!--
         <ion-button class="delete" fill="clear">
           <ion-icon class="delete_icon" slot="icon-only" name="close-outline"></ion-icon>	
         </ion-button>
+      -->
       </div>
       <ion-item fill="outline" class="input">
         <ion-label position="floating">Nom de votre tâche :</ion-label>
-        <ion-input placeholder=""></ion-input>
+        <ion-input [(ngModel)]="taskName" placeholder=""></ion-input>
       </ion-item>
       <ion-item fill="outline" class="input">
-        <ion-label position="floating">Date limite :</ion-label>
-        <ion-input placeholder=""></ion-input>
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Date :</ion-label>
+        <ion-input [(ngModel)]="taskDate" placeholder=""></ion-input>
       </ion-item>
-      <ion-item fill="outline" class="input">
-        <ion-label position="floating"> :</ion-label>
-        <ion-input placeholder=""></ion-input>
-      </ion-item>
+      
+      <div class="dateLayout">
+        <ion-item fill="outline" class="input">
+          <ion-label position="floating"> Heure début :</ion-label>
+          <ion-input [(ngModel)]="taskHourStart" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item fill="outline" class="input">
+          <ion-label position="floating"> Heure fin :</ion-label>
+          <ion-input [(ngModel)]="taskHourEnd" placeholder=""></ion-input>
+        </ion-item>
+      </div>
+  
       <ion-item fill="outline" class="input">
         <ion-label position="floating">Lieu :</ion-label>
-        <ion-input placeholder=""></ion-input>
+        <ion-input [(ngModel)]="taskLocate" placeholder=""></ion-input>
       </ion-item>
+      <!--
       <ion-item class="plus">
         <ion-checkbox slot="start" (click)="tutorialShown = !tutorialShown"></ion-checkbox>
         <ion-label>Plus d'options</ion-label>
@@ -48,9 +60,10 @@
       </div>
       <ng-template #elseBlock>
       </ng-template>
+      -->
       <div class="bar_button">
-        <ion-button class="button" shape="round">Supprimer</ion-button>
-        <ion-button class="button" shape="round">Modifier</ion-button>
+        <ion-button class="button" shape="round" (click)="dismis()">Annuler</ion-button>
+        <ion-button class="button" shape="round">Ajouter</ion-button>
       </div>
     </ion-list>
   </div>

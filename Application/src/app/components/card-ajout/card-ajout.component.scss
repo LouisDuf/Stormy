@@ -1,14 +1,11 @@
-.background{
-    background-color: #454A50;
-    height: 100%;
-    padding: 50px;
-} 
+.dateLayout{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .form{
     background-color:#FAEEE7;
-    width: 500px;
     border-radius: 20px;
-    margin: auto;
 }    
 
 h2{
