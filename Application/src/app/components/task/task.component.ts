@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { taskModel } from './../../models/taskModel';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,12 +11,16 @@ export class TaskComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  callTaskModel: Observable<taskModel>;
+  
+
+  ngOnInit() {
 
 
+  }
+
+  
  /* onCheck(event, i){
     this.tasks[i].isChecked = event.detail.checked;
   }*/
-
-
 }

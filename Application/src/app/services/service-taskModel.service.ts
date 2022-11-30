@@ -39,7 +39,7 @@ export class ServicetaskModelService {
 
 
 
-  //crud01
+  /*crud01
   resetFrom() {
     this.formData = new taskModel();
     this.formData.taskId = this.getRandomInt(0,999999);
@@ -90,5 +90,5 @@ export class ServicetaskModelService {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min +1)) + min;
-  }
+  }*/
 }

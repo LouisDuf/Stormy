@@ -1,6 +1,7 @@
+import { taskModel } from './../../models/taskModel';
+import { ServicetaskModelService } from './../../services/service-taskModel.service';
 import { ModalController } from '@ionic/angular';
 import { Component, Injectable, OnInit } from '@angular/core';
-import { TodoListPage } from '../../todo-list/todo-list.page';
 
 @Component({
   selector: 'app-card-ajout',
@@ -14,11 +15,19 @@ import { TodoListPage } from '../../todo-list/todo-list.page';
 
 export class CardAjoutComponent implements OnInit {
 
-  constructor(private modal: ModalController, private page: TodoListPage) {}
+  taskObj : taskModel = new taskModel();
+  addTaskValue : string = '';
+  editTaskvalue : string = '';
 
-  ngOnInit() {}
+  constructor(private modal: ModalController, private servTaskMod: ServicetaskModelService) {}
 
-  // Liste de mes attribut de la class CardAjoutComponent
+  ngOnInit() {
+    this.addTaskValue = '';
+    this.editTaskvalue = '';
+    this.taskObj = new taskModel();
+  }
+
+  /* Liste de mes attribut de la class CardAjoutComponent
   taskName: String;
   taskDate: Date;
   taskHourStart: String;
@@ -26,14 +35,49 @@ export class CardAjoutComponent implements OnInit {
   taskLocate: String;
 
   // Attribut qui ressemble tout les attribut
-  taskObject: { taskName: String; taskDate: Date; taskHourStart: String; taskHourEnd: String; taskLocate: String; };
+  taskObject: { taskName: String; taskDate: Date; taskHourStart: String; taskHourEnd: String; taskLocate: String; };*/
   
+
+
+  addTask(){
+    this.taskObj.name = this.addTaskValue;
+    this.servTaskMod.addTask(this.taskObj).subscribe(res => {
+      this.ngOnInit();
+      this.addTaskValue = '';
+    }, err => {
+      alert(err);
+    })
+  }
+
+  editTaks(){
+    this.taskObj.name = this.editTaskvalue;
+    this.servTaskMod.editTask(this.taskObj).subscribe(res => {
+      this.ngOnInit();
+    }, err => {
+      alert("Failed to update task");
+    })
+  }
+
+  deleteTask(edtask : taskModel) {
+    this.servTaskMod.deleteTask(edtask).subscribe(res => {
+      this.ngOnInit();
+    }, err => {
+      alert("Failed to delete task");
+    })
+  }
+
+  call(etask : taskModel) {
+    this.taskObj = etask;
+    this.editTaskvalue = etask.name; 
+  }
+
+
   async dismis(){
     await this.modal.dismiss();
   }
 
-/*
-  addNewTask(){
+
+  /*addNewTask(){
     var task = {
       isChecked : false,
       content : this.taskName
@@ -41,9 +85,9 @@ export class CardAjoutComponent implements OnInit {
     this.taskName = '';
     this.page.tasks.push(task);
     console.log(this.page.tasks.length)
-  }*/
+  }
 
-  /*AddTask(){
+  AddTask(){
     this.taskObject = ({taskName:this.taskName,
       taskDate:this.taskDate,
       taskHourStart:this.taskHourStart,
