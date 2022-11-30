@@ -48,7 +48,7 @@
 			<small>Vous n'avez pas de tâches pour le momments</small>
 		</div>
 		<div class="content" *ngIf="tasks.length > 0">
-			<div class="boxMain">
+			<div class="boxMain" *ngFor="let task of tasks">
 				<h1>Sport</h1>
 				<div class="boxTask">
 					<div class="taskTemplate">

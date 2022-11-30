@@ -32,7 +32,7 @@ export class CardAjoutComponent implements OnInit {
     await this.modal.dismiss();
   }
 
-
+/*
   addNewTask(){
     var task = {
       isChecked : false,
@@ -41,8 +41,7 @@ export class CardAjoutComponent implements OnInit {
     this.taskName = '';
     this.page.tasks.push(task);
     console.log(this.page.tasks.length)
-
-  }
+  }*/
 
   /*AddTask(){
     this.taskObject = ({taskName:this.taskName,
