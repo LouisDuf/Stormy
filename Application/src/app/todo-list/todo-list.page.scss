@@ -224,10 +224,12 @@ ion-item{
 	align-items: center;
 	--background: #1B1F24;
 	--border-color: #1B1F24;
+	--color-hover: #FAEEE7;
 
 }
 ion-checkbox::part(container){
 	--background-checked: #FF593F;
+	--background: #1B1F24;
 }
 
 ion-checkbox{
