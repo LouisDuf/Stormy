@@ -214,36 +214,47 @@ h1{
 	border-radius: 15px;
 	padding: 10px;
 	margin : 5px;
+	min-width: 260px;
+}
+
+ion-item{
+	all: inherit;
+	display: block;
+	position: relative;
+	align-items: center;
+	--background: #1B1F24;
+	--border-color: #1B1F24;
+
+}
+ion-checkbox::part(container){
+	--background-checked: #FF593F;
+}
+
+ion-checkbox{
+	margin-right: 5px;
 }
 
 @media all and (max-width: 1700px){
 	.bandeau{
 	  min-width: calc(25% - 10px);
-	  background-color: blue;
 	}
 }
 
 @media all and (max-width: 1130px){
 	.bandeau{
 	  min-width: calc(33% - 10px);
-	  background-color: green;
-
 	}
 }
 
-@media all and (max-width: 875px){
+@media all and (max-width: 920px){
 	.bandeau{
 	  min-width: calc(50% - 10px);
-	  background-color: green;
-
 	}
 }
 
-@media all and (max-width: 640px){
+@media all and (max-width: 670px){
 	.bandeau{
 	  min-width: calc(100% - 10px);
-	  background-color: green;
-
 	}
 }
 
