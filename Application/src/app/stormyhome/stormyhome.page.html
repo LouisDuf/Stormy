@@ -1,0 +1,68 @@
+<ion-tabs *ngIf="!isDesktop" >
+
+  <ion-tab-bar  >
+    <ion-tab-button tab="homeMobile" #tab1>
+      <ion-icon  [name]="tab1.selected ? 'home' : 'home-outline' "></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button  class="plusButton">
+      <ion-icon class="plusImg" name="add"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button >
+      <ion-icon  name="add"></ion-icon>
+    </ion-tab-button>
+    
+
+    <ion-tab-button tab="todo-list">
+      <ion-icon name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+  
+</ion-tabs>
+
+
+<main *ngIf="isDesktop" class="desktop">
+  <div  id="navigation" onclick="if(document.getElementById('navigation').style.minWidth=='75px'){document.getElementById('navigation').style.minWidth ='190px'}else{document.getElementById('navigation').style.minWidth ='75px'};">
+    <ul>
+      <li class="list">
+        <a>
+          <span class="logoNav"><img src="../../assets/logo.svg"></span>
+          <span class="titleApp">Stormy.</span>
+        </a>
+      </li>
+        <li class="list active">
+          <a routerLink="/stormyhome/homeDesktop" routerDirection="root" routerLinkActive="active-link"> <!--href="home.page.ts"-->
+            <span class="icon"><ion-icon name="home"></ion-icon></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a routerLink="/stormyhome/calendar" routerDirection="root" routerLinkActive="active-link">
+            <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+            <span class="title">Calendar</span>
+          </a>
+        </li>
+        <li class="list">
+          <a routerLink="/stormyhome/todo" routerDirection="root" routerLinkActive="active-link">
+            <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+            <span class="title">To-do list</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+            <span class="title">Account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ion-router-outlet class="deskktopContent"></ion-router-outlet>
+  </main>

@@ -4,20 +4,32 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/web/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'stormyhome',
     pathMatch: 'full'
   },
   {
     path: 'calendar',
-    loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
+    loadChildren: () => import('./pages/web/calendar/calendar.module').then( m => m.CalendarPageModule)
   },
   {
     path: 'todo-list',
-    loadChildren: () => import('./todo-list/todo-list.module').then( m => m.TodoListPageModule)
+    loadChildren: () => import('./pages/web/todo-list/todo-list.module').then( m => m.TodoListPageModule)
+  },
+  {
+    path: 'stormyhome',
+    loadChildren: () => import('./stormyhome/stormyhome.module').then( m => m.StormyhomePageModule)
+  },
+  {
+    path: 'home-mobile',
+    loadChildren: () => import('./pages/mobile/home-mobile/home-mobile.module').then( m => m.HomeMobilePageModule)
+  },
+  {
+    path: 'todo-list',
+    loadChildren: () => import('./pages/mobile/todo-list/todo-list.module').then( m => m.TodoListPageModule)
   },
 ];
 
