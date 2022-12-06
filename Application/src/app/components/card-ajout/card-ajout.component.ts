@@ -40,36 +40,38 @@ export class CardAjoutComponent implements OnInit {
 
 
   addTask(){
-    this.taskObj.name = this.addTaskValue;
+    this.taskObj.nom = this.addTaskValue;
     this.servTaskMod.addTask(this.taskObj).subscribe(res => {
-      this.ngOnInit();
+      // this.ngOnInit();
       this.addTaskValue = '';
+      this.editTaskvalue = '';
+
     }, err => {
       alert(err);
     })
   }
 
-  editTaks(){
-    this.taskObj.name = this.editTaskvalue;
-    this.servTaskMod.editTask(this.taskObj).subscribe(res => {
-      this.ngOnInit();
-    }, err => {
-      alert("Failed to update task");
-    })
-  }
+  // editTaks(){
+  //   this.taskObj.name = this.editTaskvalue;
+  //   this.servTaskMod.editTask(this.taskObj).subscribe(res => {
+  //     this.ngOnInit();
+  //   }, err => {
+  //     alert("Failed to update task");
+  //   })
+  // }
 
-  deleteTask(edtask : taskModel) {
-    this.servTaskMod.deleteTask(edtask).subscribe(res => {
-      this.ngOnInit();
-    }, err => {
-      alert("Failed to delete task");
-    })
-  }
+  // deleteTask(edtask : taskModel) {
+  //   this.servTaskMod.deleteTask(edtask).subscribe(res => {
+  //     this.ngOnInit();
+  //   }, err => {
+  //     alert("Failed to delete task");
+  //   })
+  // }
 
-  call(etask : taskModel) {
-    this.taskObj = etask;
-    this.editTaskvalue = etask.name; 
-  }
+  // call(etask : taskModel) {
+  //   this.taskObj = etask;
+  //   this.editTaskvalue = etask.name; 
+  // }
 
 
   async dismis(){

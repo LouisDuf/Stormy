@@ -14,27 +14,27 @@ export class ServicetaskModelService {
   public list: taskModel[] = [];
 
   constructor(private http : HttpClient) {
-    this.serviceURL = "http://localhost:8100";
+    this.serviceURL = "http://localhost:8080/api/task/";
     //this.resetFrom();
   }
   
   
   //crud02
   addTask(task : taskModel) : Observable<taskModel>  {
-    return this.http.post<taskModel>(this.serviceURL,task);
+    return this.http.post<taskModel>(this.serviceURL,JSON.stringify(task));
   }
 
   getAllTask() : Observable<taskModel[]>  {
     return this.http.get<taskModel[]>(this.serviceURL);
   }
 
-  deleteTask(task : taskModel) : Observable<taskModel>  {
-    return this.http.delete<taskModel>(this.serviceURL+'/'+task.taskId);
-  }
+  // deleteTask(task : taskModel) : Observable<taskModel>  {
+  //   return this.http.delete<taskModel>(this.serviceURL+'/'+task.taskId);
+  // }
 
-  editTask(task : taskModel) : Observable<taskModel>  {
-    return this.http.put<taskModel>(this.serviceURL+'/'+task.taskId,task);
-  }
+  // editTask(task : taskModel) : Observable<taskModel>  {
+  //   return this.http.put<taskModel>(this.serviceURL+'/'+task.taskId,task);
+  // }
 
 
 
