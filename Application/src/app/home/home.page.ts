@@ -15,7 +15,7 @@ export class HomePage {
     const modal = await  this.modal.create({
       component: CardAjoutComponent,
       handle: true,
-      cssClass: "maclasse",
+      //cssClass: "maclasse",      //inutile?? aucune classe maclasse trouvé
     });
     await modal.present();
   }

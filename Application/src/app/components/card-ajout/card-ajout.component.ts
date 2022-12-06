@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-card-ajout',
@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class CardAjoutComponent implements OnInit {
 
   constructor() { }
+  tutorialShown = false;
 
   ngOnInit() {}
-
 }
+

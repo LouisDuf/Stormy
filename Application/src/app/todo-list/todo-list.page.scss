@@ -168,7 +168,9 @@ main
 	color: #FAEEE7;
 }
 
+
 /* --- Page todo list --- */
+
 .content{
 	display: flex;
 	flex-direction: column;
@@ -188,11 +190,10 @@ main
 	overflow: scroll;
 	background: #FAEEE7;
 	border-radius: 20px;
-	margin: 15px;
+	margin: 10px;
 	padding:15px;
 	min-width: 300px;
 	min-height: 400px;
-	max-height: calc(100% - 30px);
 	color: #1B1F24;
 }
 
@@ -205,55 +206,48 @@ h1{
 .bandeau
 {
 	display: flex;
-	justify-content: space-between;
+	//justify-content: space-between;
 	height: 110px;
 	align-items: center;
 	background: #1B1F24;
 	color: #FAEEE7;
 	border-radius: 15px;
 	padding: 10px;
-	margin : 5px 20px 5px 0px;
+	margin : 5px;
+	min-width: 170px;
 }
+
+@media all and (max-width: 1600px){
+	.bandeau{
+	  min-width: calc(20% - 15px);
+	}
+}
+
+@media all and (max-width: 1000px){
+	.bandeau{
+	  min-width: calc(33% - 15px);
+	}
+}
+
 
 .detail_task{
 	display: flex;
 	flex-direction: column;
+	margin-left: 10%;
+	//float: right;
 }
 
 .date{
-	margin-left: 50px;
-	margin-bottom: 20px;
-	font-family : 'Poppins', sans-serif;
+	//margin-left: 50px;
+	//position: fixed;
+	//margin-bottom: 20px;
+	font-family:'Poppins', sans-serif;
 
 }
 
 .horaire{
 	color: #FF593F;
-	margin-left: 50px;
 	font-family : 'Poppins', sans-serif;
 }
 
-ion-item{
-	--background: #1B1F24;
-}
 
-ion-label{
-	font-weight: bold;
-	font-family : 'Poppins', sans-serif;
-    margin: 15px;
-}
-
-ion-checkbox{
-	width: 30px;
-	height: 30px;
-	border-radius: 5px;
-	--border-radius: 5px;
-	--border-color: #FAEEE7;
-	--checkmark-color: black;
-	--border-color-checked :#FAEEE7;
-	--background-checked: #24FF00;
-	--background: #686464;
-}
-
-// voici la couleur après avoir check #282c2c
-// la barre semin noir casse les couilles aussi
