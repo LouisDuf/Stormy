@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CardAjoutComponent } from '../components/card-ajout/card-ajout.component';
+import { interval, Observable } from "rxjs";
+import { map, shareReplay } from "rxjs/operators";
 
 @Component({
   selector: 'app-home',
@@ -8,14 +10,10 @@ import { CardAjoutComponent } from '../components/card-ajout/card-ajout.componen
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  /*constructor(private modal: ModalController) {}*/
-
   async add(){
     const modal = await  this.modal.create({
       component: CardAjoutComponent,
       handle: true,
-      //cssClass: "maclasse",      //inutile?? aucune classe maclasse trouvé
     });
     await modal.present();
   }
@@ -25,7 +23,6 @@ export class HomePage {
       shareReplay(1)
     );
   }
- 
   public timeLeft$: Observable<timeComponents>;
 }
 
@@ -34,37 +31,15 @@ interface timeComponents {
   hoursToDday: number;
 }
 
-
-import { interval, Observable } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
-
-
-function calcDateDiff(endDay: Date = new Date(2022, 10, 31)): timeComponents {
+function calcDateDiff(endDay: Date = new Date('2022, 12, 08, 13:55:00')): timeComponents {
   const dDay = endDay.valueOf();
-
   const milliSecondsInASecond = 1000;
   const minutesInAnHour = 60;
   const secondsInAMinute = 60;
-
   const timeDifference = dDay - Date.now();
-
-  const daysToDday = Math.floor(
-    timeDifference /
-      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute )
-  );
-
-  const hoursToDday = Math.floor(
-    (timeDifference /
-      (milliSecondsInASecond * minutesInAnHour * secondsInAMinute))
-  );
-
-  const minutesToDday = Math.floor(
-    (timeDifference / (milliSecondsInASecond * minutesInAnHour)) %
-      secondsInAMinute
-  );
-
-  const secondsToDday =
-    Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
-
+  const daysToDday = Math.floor(timeDifference / (milliSecondsInASecond * minutesInAnHour * secondsInAMinute ));
+  const hoursToDday = Math.floor((timeDifference / (milliSecondsInASecond * minutesInAnHour * secondsInAMinute)));
+  const minutesToDday = Math.floor((timeDifference / (milliSecondsInASecond * minutesInAnHour)) % secondsInAMinute);
+  const secondsToDday = Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
   return { minutesToDday, hoursToDday };
 }
