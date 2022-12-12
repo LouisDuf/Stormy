@@ -16,19 +16,19 @@ export class HomePage {
   constructor(public db: AngularFireDatabase)
   {
       
-  this.db.list('items').valueChanges().subscribe(items => {
-    console.log(items);
-  });
+  // this.db.list('items').valueChanges().subscribe(items => {
+  //   console.log(items);
+  // });
 
   
-  // Écrire des données dans la base de données en mode déconnecté
-  this.db.list('items').push({ name: 'item1' });
+  // // Écrire des données dans la base de données en mode déconnecté
+  // this.db.list('items').push({ name: 'item2' });
 
 
-  // Lire les données de la base de données en mode déconnecté
-  this.db.list('items').valueChanges().subscribe(items => {
-    console.log(items);
-  });
+  // // Lire les données de la base de données en mode déconnecté
+  // this.db.list('items').valueChanges().subscribe(items => {
+  //   console.log(items);
+  // });
 
 
 
@@ -38,15 +38,25 @@ export class HomePage {
 
   nomTache: string = "RDV sorcière";
 
+  numCinq: number = 5;
+  numResult: number = 0;
+  numUn: number = 1;
 
-  testCache() {
-    this.nomTache
-    this.db.list('Event').push(this.nomTache)
+  testCache1() {
+    this.numUn
+    this.numResult
+    this.db.list('Event').push(this.numUn)
+    this.db.list('Event').push(this.numResult)
+  }
+  testCache2() {
+    this.numUn
+    this.numCinq
+    this.db.list('Event').push(this.numResult = this.numCinq + this.numResult)
   }
 
   testDeco() {
-    this.nomTache="On capte plus"
-    this.db.list('Event').push(this.nomTache)
+    this.nomTache="On capte plus genre plus"
+    this.db.list('HorsLigne').push(this.nomTache)
   }
 
 
