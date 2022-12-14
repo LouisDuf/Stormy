@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CardAjoutComponent } from '../components/card-ajout/card-ajout.component';
-import { interval, Observable } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
 
 @Component({
   selector: 'app-home',
@@ -17,29 +15,54 @@ export class HomePage {
     });
     await modal.present();
   }
-  constructor(private modal: ModalController) {
-    this.timeLeft$ = interval(1000).pipe(
-      map(x => calcDateDiff()),
-      shareReplay(1)
-    );
+  constructor(private modal: ModalController) {}
+
+  pause() {
+    tpause=!tpause;
   }
-  public timeLeft$: Observable<timeComponents>;
+  end() {
+    end=!end;
+  }
 }
 
-interface timeComponents {
-  minutesToDday: number;
-  hoursToDday: number;
+var secondsRemaining;
+var intervalHandle;
+var tpause=false;
+var end=false;
+
+function tick(){
+	var timeDisplay = document.getElementById("time");
+	var min = Math.floor(secondsRemaining / 60);
+	let sec: string|number = secondsRemaining - (min * 60) ;
+	if (sec < 10) {
+		sec = "0" + sec;
+	}
+	var message = min.toString() + ":" + sec;
+	timeDisplay.innerHTML = message;
+	if (secondsRemaining === 0 ){
+		alert("Bien joué !");
+		clearInterval(intervalHandle);
+    end=false
+	}
+	secondsRemaining--;
+  if(end==true){
+    secondsRemaining=0;
+  }
 }
 
-function calcDateDiff(endDay: Date = new Date('2022, 12, 08, 13:55:00')): timeComponents {
-  const dDay = endDay.valueOf();
-  const milliSecondsInASecond = 1000;
-  const minutesInAnHour = 60;
-  const secondsInAMinute = 60;
-  const timeDifference = dDay - Date.now();
-  const daysToDday = Math.floor(timeDifference / (milliSecondsInASecond * minutesInAnHour * secondsInAMinute ));
-  const hoursToDday = Math.floor((timeDifference / (milliSecondsInASecond * minutesInAnHour * secondsInAMinute)));
-  const minutesToDday = Math.floor((timeDifference / (milliSecondsInASecond * minutesInAnHour)) % secondsInAMinute);
-  const secondsToDday = Math.floor(timeDifference / milliSecondsInASecond) % secondsInAMinute;
-  return { minutesToDday, hoursToDday };
+function startCountdown(){
+	var minutes = 1; //val a modif en fonction de la tache
+	secondsRemaining = minutes * 60;
+	intervalHandle = setInterval(function(){
+    if(tpause!=true){
+      tick();
+    }
+  }, 1000);
+}
+
+window.onload = function(){
+  var startButton=document.getElementById("startButton");
+	startButton.onclick = function(){
+		startCountdown();
+	};
 }

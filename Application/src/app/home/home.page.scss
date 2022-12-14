@@ -397,3 +397,35 @@ ion-card-title{
   line-height: 60px;
   vertical-align: middle;
  }
+
+ #container { 
+  width:100px;
+  margin:auto;
+}
+
+#startButton{
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  --background: #FF593F;
+  --color: #FAEEE7;
+  bottom: 15px;
+  right: 245px;
+}
+
+.pause{
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  --background: #FF593F;
+  --color: #FAEEE7;
+  bottom: 15px;
+  right: 130px;
+}
+
+#time{
+  font-size: 70px;
+  width: 250px;
+  position:absolute;
+  left: 35%;
+}
